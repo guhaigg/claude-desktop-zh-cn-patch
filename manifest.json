@@ -1,0 +1,18 @@
+{
+  "name": "claude-desktop-zh-cn-patch",
+  "description": "Simplified Chinese language patch for Claude Desktop on Windows.",
+  "target": {
+    "app": "Claude Desktop",
+    "platform": "win32",
+    "testedVersion": "1.6259.1",
+    "packageFamily": "Claude_pzs8sxrjxfjjc"
+  },
+  "patches": [
+    "resources/zh-CN.json",
+    "resources/en-US.json",
+    "resources/ion-dist/i18n/zh-CN.json",
+    "resources/ion-dist/i18n/en-US.json"
+  ],
+  "install": "install.ps1",
+  "restore": "restore.ps1"
+}
