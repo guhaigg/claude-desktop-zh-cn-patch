@@ -45,7 +45,7 @@ if ($assetFiles.Count -lt 1) {
 
 foreach ($asset in $assetFiles) {
   $assetText = [IO.File]::ReadAllText($asset.FullName)
-  if ($assetText -match "Drag to pin|General coding session") {
+  if ($assetText -cmatch "Drag to pin|General coding session|New task|New session|Organize my screenshots|Find insights in files|Customize with plugins") {
     throw "Unpatched hardcoded UI text remains in $($asset.Name)."
   }
 }
