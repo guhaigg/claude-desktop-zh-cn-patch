@@ -117,6 +117,21 @@ if (-not $NoForceEnglishSlot) {
   Copy-WithBackup (Join-Path $patchIon "en-US.json") (Join-Path $targetIon "en-US.json") $backupDir
 }
 
+$knownLanguageFiles = @(
+  "zh-CN.json",
+  "en-US.json",
+  "ion-dist\i18n\zh-CN.json",
+  "ion-dist\i18n\en-US.json"
+)
+
+Get-ChildItem -LiteralPath $patchRoot -Recurse -File |
+  ForEach-Object {
+    $relative = $_.FullName.Substring($patchRoot.Length).TrimStart("\", "/")
+    if ($knownLanguageFiles -contains $relative) { return }
+    $destination = Join-Path $targetResources $relative
+    Copy-WithBackup $_.FullName $destination $backupDir
+  }
+
 $manifestText = $script:RestoreManifest | ConvertTo-Json -Depth 10
 [IO.File]::WriteAllText((Join-Path $backupDir "restore-manifest.json"), $manifestText, [Text.UTF8Encoding]::new($false))
 

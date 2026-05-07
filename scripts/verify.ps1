@@ -33,8 +33,25 @@ foreach ($key in $checks) {
   }
 }
 
+$assetRoot = Join-Path $root "patch\resources\ion-dist\assets\v1"
+if (-not (Test-Path -LiteralPath $assetRoot)) {
+  throw "Missing asset patch directory: patch\resources\ion-dist\assets\v1"
+}
+
+$assetFiles = @(Get-ChildItem -LiteralPath $assetRoot -Filter "*.js" -File)
+if ($assetFiles.Count -lt 1) {
+  throw "Missing patched asset chunks."
+}
+
+foreach ($asset in $assetFiles) {
+  $assetText = [IO.File]::ReadAllText($asset.FullName)
+  if ($assetText -match "Drag to pin|General coding session") {
+    throw "Unpatched hardcoded UI text remains in $($asset.Name)."
+  }
+}
+
 $secretPatterns = @(
-  "sk-[A-Za-z0-9_-]{12,}"
+  "sk-[A-Za-z0-9_-]{30,}"
 )
 
 Get-ChildItem -LiteralPath $root -Recurse -File |

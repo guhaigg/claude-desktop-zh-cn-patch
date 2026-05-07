@@ -11,7 +11,8 @@
     "resources/zh-CN.json",
     "resources/en-US.json",
     "resources/ion-dist/i18n/zh-CN.json",
-    "resources/ion-dist/i18n/en-US.json"
+    "resources/ion-dist/i18n/en-US.json",
+    "resources/ion-dist/assets/v1/*.js"
   ],
   "install": "install.ps1",
   "restore": "restore.ps1"
