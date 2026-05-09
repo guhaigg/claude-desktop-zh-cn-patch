@@ -2,6 +2,8 @@
 
 Windows 版 Claude Desktop 简体中文汉化补丁。适用于官方 MSIX / WindowsApps 安装版。
 
+致谢 https://linux.do/
+
 > 当前测试版本：Claude Desktop `1.6259.1`
 
 ## 效果截图
