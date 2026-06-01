@@ -1,0 +1,278 @@
+[
+  {
+    "find": "General coding session",
+    "replace": "通用编码会话"
+  },
+  {
+    "find": "Organize my screenshots",
+    "replace": "整理我的截图"
+  },
+  {
+    "find": "Find insights in files",
+    "replace": "从文件中发现洞察"
+  },
+  {
+    "find": "Customize with plugins",
+    "replace": "用插件自定义"
+  },
+  {
+    "find": "Drag to pin",
+    "replace": "拖动以固定"
+  },
+  {
+    "find": "New task",
+    "replace": "新建任务"
+  },
+  {
+    "find": "New session",
+    "replace": "新建会话"
+  },
+  {
+    "find": "Projects",
+    "replace": "项目"
+  },
+  {
+    "find": "Extensions",
+    "replace": "扩展"
+  },
+  {
+    "find": "Connectors",
+    "replace": "连接器"
+  },
+  {
+    "find": "Cowork",
+    "replace": "协作"
+  },
+  {
+    "find": "Desktop App",
+    "replace": "桌面应用"
+  },
+  {
+    "find": "Developer",
+    "replace": "开发者"
+  },
+  {
+    "find": "defaultMessage:\"Pinned\"",
+    "replace": "defaultMessage:\"已固定\""
+  },
+  {
+    "find": "defaultMessage:\"Recents\"",
+    "replace": "defaultMessage:\"最近\""
+  },
+  {
+    "find": "defaultMessage:\"Customize\"",
+    "replace": "defaultMessage:\"自定义\""
+  },
+  {
+    "find": "defaultMessage:\"More\"",
+    "replace": "defaultMessage:\"更多\""
+  },
+  {
+    "find": "defaultMessage:\"All\"",
+    "replace": "defaultMessage:\"全部\""
+  },
+  {
+    "find": "defaultMessage:\"Messages\"",
+    "replace": "defaultMessage:\"消息\""
+  },
+  {
+    "find": "defaultMessage:\"Total tokens\"",
+    "replace": "defaultMessage:\"Token 总数\""
+  },
+  {
+    "find": "defaultMessage:\"Active days\"",
+    "replace": "defaultMessage:\"活跃天数\""
+  },
+  {
+    "find": "defaultMessage:\"Current streak\"",
+    "replace": "defaultMessage:\"当前连续天数\""
+  },
+  {
+    "find": "defaultMessage:\"Longest streak\"",
+    "replace": "defaultMessage:\"最长连续天数\""
+  },
+  {
+    "find": "defaultMessage:\"Peak hour\"",
+    "replace": "defaultMessage:\"高峰时段\""
+  },
+  {
+    "find": "defaultMessage:\"Favorite model\"",
+    "replace": "defaultMessage:\"常用模型\""
+  },
+  {
+    "find": "defaultMessage:\"30d\"",
+    "replace": "defaultMessage:\"30 天\""
+  },
+  {
+    "find": "defaultMessage:\"7d\"",
+    "replace": "defaultMessage:\"7 天\""
+  },
+  {
+    "find": "z5t={recents:\"Recents\",shared:\"Shared\"}",
+    "replace": "z5t={recents:\"最近\",shared:\"已共享\"}"
+  },
+  {
+    "find": "H5t={all:\"All\",active:\"Active\",archived:\"Archived\"}",
+    "replace": "H5t={all:\"全部\",active:\"活跃\",archived:\"已归档\"}"
+  },
+  {
+    "find": "V5t={all:\"No tasks yet.\",active:\"No active tasks.\",archived:\"No archived tasks.\"}",
+    "replace": "V5t={all:\"还没有任务。\",active:\"没有活跃任务。\",archived:\"没有已归档任务。\"}"
+  },
+  {
+    "find": "What should we work on next,",
+    "replace": "接下来我们做什么，"
+  },
+  {
+    "find": "You've used ~",
+    "replace": "你已使用约 "
+  },
+  {
+    "find": " more tokens than Pride and Prejudice.",
+    "replace": " 倍于《傲慢与偏见》的 Token。"
+  },
+  {
+    "find": "title:\"Tasks\"",
+    "replace": "title:\"任务\""
+  },
+  {
+    "find": "title:\"Chats\"",
+    "replace": "title:\"聊天\""
+  },
+  {
+    "find": "title:\"Scheduled tasks\"",
+    "replace": "title:\"计划任务\""
+  },
+  {
+    "find": "title:\"Customize\"",
+    "replace": "title:\"自定义\""
+  },
+  {
+    "find": "label:\"Active\"",
+    "replace": "label:\"活跃\""
+  },
+  {
+    "find": "label:\"Archived\"",
+    "replace": "label:\"已归档\""
+  },
+  {
+    "find": "label:\"All\"",
+    "replace": "label:\"全部\""
+  },
+  {
+    "find": "children:\"View all\"",
+    "replace": "children:\"查看全部\""
+  },
+  {
+    "find": "children:[\"View all\"",
+    "replace": "children:[\"查看全部\""
+  },
+  {
+    "find": "dt(e){return e.title?.trim()||e.post_turn_summary?.title?.trim()||\"Untitled session\"}",
+    "replace": "dt(e){return e.title?.trim()||e.post_turn_summary?.title?.trim()||\"未命名会话\"}"
+  },
+  {
+    "find": "He={recent:\"Recent\",created:\"Created\",alphabetical:\"Alphabetical\"}",
+    "replace": "He={recent:\"最近\",created:\"创建时间\",alphabetical:\"字母顺序\"}"
+  },
+  {
+    "find": "z5t={recents:\"Recents\",shared:\"Shared\"}",
+    "replace": "z5t={recents:\"最近\",shared:\"已共享\"}"
+  },
+  {
+    "find": "H5t={all:\"All\",active:\"Active\",archived:\"Archived\"}",
+    "replace": "H5t={all:\"全部\",active:\"活跃\",archived:\"已归档\"}"
+  },
+  {
+    "find": "V5t={all:\"No tasks yet.\",active:\"No active tasks.\",archived:\"No archived tasks.\"}",
+    "replace": "V5t={all:\"还没有任务。\",active:\"没有活跃任务。\",archived:\"没有已归档任务。\"}"
+  },
+  {
+    "find": "Prep for my next meeting",
+    "replace": "准备我的下一场会议"
+  },
+  {
+    "find": "Plan my next vacation",
+    "replace": "规划我的下一次旅行"
+  },
+  {
+    "find": "Prepare for a job interview",
+    "replace": "准备求职面试"
+  },
+  {
+    "find": "Scheduled tasks",
+    "replace": "计划任务"
+  },
+  {
+    "find": "Keep awake",
+    "replace": "保持唤醒"
+  },
+  {
+    "find": "No scheduled tasks yet.",
+    "replace": "还没有计划任务。"
+  },
+  {
+    "find": "Personal plugins",
+    "replace": "个人插件"
+  },
+  {
+    "find": "Connect your apps",
+    "replace": "连接你的应用"
+  },
+  {
+    "find": "Create new skills",
+    "replace": "创建新技能"
+  },
+  {
+    "find": "Browse plugins",
+    "replace": "浏览插件"
+  },
+  {
+    "find": "Skills, connectors, and plugins shape how Claude works with you.",
+    "replace": "技能、连接器和插件会决定 Claude 如何与你协作。"
+  },
+  {
+    "find": "Let Claude read and write to the tools you already use.",
+    "replace": "让 Claude 读写你已经在用的工具。"
+  },
+  {
+    "find": "Teach Claude your processes, team norms, and expertise.",
+    "replace": "教 Claude 了解你的流程、团队规范和专业知识。"
+  },
+  {
+    "find": "Add pre-built knowledge for your field.",
+    "replace": "为你的领域添加预置知识。"
+  },
+  {
+    "find": "Run tasks on a schedule or whenever you need them. Type /schedule in any session to set one up.",
+    "replace": "按计划运行任务，或在需要时运行。可在任意会话中输入 /schedule 来设置。"
+  },
+  {
+    "find": "Scheduled tasks only run while your computer is awake.",
+    "replace": "计划任务只会在电脑保持唤醒时运行。"
+  },
+  {
+    "find": "Scheduled tasks use a randomized delay of several minutes for server performance.",
+    "replace": "为保证服务器性能，计划任务会随机延迟几分钟执行。"
+  },
+  {
+    "find": "计划任务 only run while your computer is awake.",
+    "replace": "计划任务只会在电脑保持唤醒时运行。"
+  },
+  {
+    "find": "计划任务 use a randomized delay of several minutes for server performance.",
+    "replace": "为保证服务器性能，计划任务会随机延迟几分钟执行。"
+  },
+  {
+    "find": "Preparing session...",
+    "replace": "正在准备会话..."
+  },
+  {
+    "find": "Preparing session…",
+    "replace": "正在准备会话…"
+  },
+  {
+    "find": "Gateway",
+    "replace": "网关"
+  }
+]
