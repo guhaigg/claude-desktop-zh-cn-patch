@@ -6,8 +6,8 @@ Claude Desktop 简体中文补丁。项目只修改本机已经安装好的官�
 
 ## 当前状态
 
-- 适配版本：Claude Desktop `1.9659.2`
-- Windows：已在 Claude Desktop `1.9659.2` 上实机验证
+- 适配版本：Claude Desktop `1.11187.1`
+- Windows：已在 Claude Desktop AppX / MSIX `1.11187.1` 上实机验证
 - macOS / Linux：使用同一套 Electron 资源补丁逻辑，脚本已适配，但仍建议在对应系统实机复测
 - 发布内容：只包含补丁资源、安装脚本、恢复脚本和验证脚本
 - 不再依赖固定前端 chunk 文件名，改为安装时扫描当前版本资源并按内容替换
@@ -339,16 +339,16 @@ node .\scripts\sync-from-installed.mjs --app-dir "C:\Users\you\AppData\Local\Ant
 ## 打包 Release
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 1.9659.2
+powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 1.11187.1
 ```
 
 输出：
 
 ```text
-dist/claude-desktop-zh-cn-patch-windows-1.9659.2.zip
-dist/claude-desktop-zh-cn-patch-macos-1.9659.2.tar.gz
-dist/claude-desktop-zh-cn-patch-linux-1.9659.2.tar.gz
-dist/release-manifest-1.9659.2.json
+dist/claude-desktop-zh-cn-patch-windows-1.11187.1.zip
+dist/claude-desktop-zh-cn-patch-macos-1.11187.1.tar.gz
+dist/claude-desktop-zh-cn-patch-linux-1.11187.1.tar.gz
+dist/release-manifest-1.11187.1.json
 ```
 
 Release 包只包含补丁项目文件，不包含 Claude Desktop 本体。
@@ -423,7 +423,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -NoForceEnglishSlot
 
 ## 已知限制
 
-- Windows 已按 Claude Desktop `1.9659.2` 实机验证。
+- Windows 已按 Claude Desktop AppX / MSIX `1.11187.1` 实机验证。
 - macOS / Linux 使用同一套资源补丁逻辑，但仍需要对应系统实机复测。
 - 新版新增 key 仍有部分英文回落，需要持续补翻。
 - 服务端返回的动态文案、模型错误、账号状态、历史会话标题、用户自定义项目名不会全部自动翻译。
