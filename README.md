@@ -141,8 +141,10 @@ install-uac.vbs
 
 1. 定位当前 AppX / MSIX 版 Claude Desktop；
 2. 关闭正在运行的 Claude；
-3. 以管理员权限修改当前版本的资源文件；
+3. 以管理员权限创建一次性 SYSTEM 任务修改当前版本的资源文件；
 4. 通过 AppX 包身份重新启动 Claude。
+
+说明：WindowsApps 目录通常只有 `SYSTEM` / `TrustedInstaller` 可写，管理员账号也可能只有读取权限。脚本不会修改 WindowsApps ACL，也不会 takeown；只使用一次性 SYSTEM 计划任务完成补丁写入。
 
 也可以手动执行：
 
