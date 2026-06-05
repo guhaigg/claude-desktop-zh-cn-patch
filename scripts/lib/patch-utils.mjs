@@ -120,7 +120,53 @@ function listChildDirectories(parentPath, predicate = () => true) {
     .map((entry) => path.join(parentPath, entry.name));
 }
 
+function getWindowsAppxResourcesDir() {
+  try {
+    const command = [
+      "-NoProfile",
+      "-ExecutionPolicy", "Bypass",
+      "-Command",
+      "(Get-AppxPackage -Name 'Claude' -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty InstallLocation)"
+    ];
+    const output = execFileSync("powershell.exe", command, {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+
+    if (!output) {
+      return null;
+    }
+
+    const candidate = path.join(output, "app", "resources");
+    return isClaudeResourcesDir(candidate) ? candidate : null;
+  } catch {
+    return null;
+  }
+}
+
 function autoResolveWindowsResourcesDir() {
+  const appxResources = getWindowsAppxResourcesDir();
+  if (appxResources) {
+    return appxResources;
+  }
+
+  const programFiles = process.env.ProgramFiles;
+  if (programFiles) {
+    try {
+      const windowsApps = path.join(programFiles, "WindowsApps");
+      const packageDirs = listChildDirectories(windowsApps, (name) => name.startsWith("Claude_"))
+        .sort((left, right) => compareVersionsDescending(path.basename(left), path.basename(right)));
+      for (const packageDir of packageDirs) {
+        const candidate = path.join(packageDir, "app", "resources");
+        if (isClaudeResourcesDir(candidate)) {
+          return candidate;
+        }
+      }
+    } catch {
+      // Ignore WindowsApps enumeration failures; AppX lookup already tried above.
+    }
+  }
+
   const localAppData = process.env.LOCALAPPDATA;
   if (localAppData) {
     const anthropicRoot = path.join(localAppData, "AnthropicClaude");
@@ -128,19 +174,6 @@ function autoResolveWindowsResourcesDir() {
       .sort((left, right) => compareVersionsDescending(path.basename(left), path.basename(right)));
     for (const appDir of appDirs) {
       const candidate = path.join(appDir, "resources");
-      if (isClaudeResourcesDir(candidate)) {
-        return candidate;
-      }
-    }
-  }
-
-  const programFiles = process.env.ProgramFiles;
-  if (programFiles) {
-    const windowsApps = path.join(programFiles, "WindowsApps");
-    const packageDirs = listChildDirectories(windowsApps, (name) => name.startsWith("Claude_"))
-      .sort((left, right) => compareVersionsDescending(path.basename(left), path.basename(right)));
-    for (const packageDir of packageDirs) {
-      const candidate = path.join(packageDir, "app", "resources");
       if (isClaudeResourcesDir(candidate)) {
         return candidate;
       }

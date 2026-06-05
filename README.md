@@ -97,7 +97,60 @@ install-uac.vbs
 
 这个入口会通过 UAC 以管理员权限运行 `install.ps1`。
 
-### 方式二：PowerShell 安装
+### 方式二：AppX / MSIX 协作版启动入口
+
+如果你使用的是 Windows Store / MSIX 版 Claude Desktop，协作（Cowork）需要通过 AppX 包身份启动。不要直接启动 `WindowsApps` 里的 `Claude.exe`，也不要用旧的 Squirrel 目录启动，否则协作可能提示“需要更新的安装版本”。
+
+补丁仓提供普通启动入口：
+
+```text
+launch.ps1
+```
+
+它会优先通过：
+
+```text
+shell:AppsFolder\Claude_pzs8sxrjxfjjc!Claude
+```
+
+启动 AppX / MSIX 版 Claude Desktop；如果没有 AppX 包，才回退到：
+
+```text
+C:\Users\<you>\AppData\Local\AnthropicClaude\app-<version>
+```
+
+普通启动入口**不会自动打补丁**，避免每次启动都写安装目录，也避免补丁失败阻断协作启动。
+
+手动执行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\launch.ps1
+```
+
+### 方式三：更新后按需重新应用中文补丁
+
+Claude Desktop 更新后，新的安装目录会覆盖或丢失补丁文件。需要重新汉化时，再运行管理员补丁入口：
+
+Windows 下可直接双击：
+
+```text
+install-uac.vbs
+```
+
+该入口会：
+
+1. 定位当前 AppX / MSIX 版 Claude Desktop；
+2. 关闭正在运行的 Claude；
+3. 以管理员权限修改当前版本的资源文件；
+4. 通过 AppX 包身份重新启动 Claude。
+
+也可以手动执行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install-appx.ps1
+```
+
+### 方式四：PowerShell 安装
 
 在补丁目录执行：
 
