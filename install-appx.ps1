@@ -1,3 +1,7 @@
+param(
+  [switch]$NoLaunch
+)
+
 $ErrorActionPreference = "Stop"
 
 function Test-IsAdmin {
@@ -87,4 +91,6 @@ New-Item -ItemType Directory -Force -Path $stateDir | Out-Null
   updatedAt = (Get-Date).ToString("o")
 } | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $statePath -Encoding UTF8
 
-Start-Process -FilePath "explorer.exe" -ArgumentList "shell:AppsFolder\$($pkg.PackageFamilyName)!Claude"
+if (-not $NoLaunch) {
+  Start-Process -FilePath "explorer.exe" -ArgumentList "shell:AppsFolder\$($pkg.PackageFamilyName)!Claude"
+}

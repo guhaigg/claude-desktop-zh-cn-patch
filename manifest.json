@@ -8,7 +8,7 @@
       "darwin",
       "linux"
     ],
-    "testedVersion": "1.11187.1",
+    "testedVersion": "1.11187.4",
     "packageFamily": "Claude_pzs8sxrjxfjjc"
   },
   "patches": [
@@ -22,5 +22,6 @@
     "patch/hardcoded-replacements.json"
   ],
   "install": "install.ps1",
+  "installAppx": "install-appx.ps1",
   "restore": "restore.ps1"
 }

@@ -6,8 +6,8 @@ Claude Desktop 简体中文补丁。项目只修改本机已经安装好的官�
 
 ## 当前状态
 
-- 适配版本：Claude Desktop `1.11187.1`
-- Windows：已在 Claude Desktop AppX / MSIX `1.11187.1` 上实机验证
+- 适配版本：Claude Desktop `1.11187.4`
+- Windows：已在 Claude Desktop AppX / MSIX `1.11187.4` 上实机验证
 - macOS / Linux：使用同一套 Electron 资源补丁逻辑，脚本已适配，但仍建议在对应系统实机复测
 - 发布内容：只包含补丁资源、安装脚本、恢复脚本和验证脚本
 - 不再依赖固定前端 chunk 文件名，改为安装时扫描当前版本资源并按内容替换
@@ -95,7 +95,7 @@ https://github.com/guhaigg/claude-desktop-zh-cn-patch
 install-uac.vbs
 ```
 
-这个入口会通过 UAC 以管理员权限运行 `install.ps1`。
+这个入口会通过 UAC 以管理员权限运行 AppX / MSIX 补丁入口，补当前 Claude 版本。
 
 ### 方式二：AppX / MSIX 协作版启动入口
 
@@ -119,7 +119,7 @@ shell:AppsFolder\Claude_pzs8sxrjxfjjc!Claude
 C:\Users\<you>\AppData\Local\AnthropicClaude\app-<version>
 ```
 
-普通启动入口**不会自动打补丁**，避免每次启动都写安装目录，也避免补丁失败阻断协作启动。
+普通启动入口**不会每次启动都写安装目录**。它只做资源 hash 检测：如果当前 AppX / MSIX 安装目录已经是补丁后的资源，就直接启动；如果 Claude 更新后资源漂移，才弹出 UAC 运行一次补丁，然后再通过 AppX 包身份启动。
 
 手动执行：
 
@@ -127,7 +127,7 @@ C:\Users\<you>\AppData\Local\AnthropicClaude\app-<version>
 powershell -ExecutionPolicy Bypass -File .\launch.ps1
 ```
 
-### 方式三：更新后按需重新应用中文补丁
+### 方式三：更新后智能重新应用中文补丁
 
 Claude Desktop 更新后，新的安装目录会覆盖或丢失补丁文件。需要重新汉化时，再运行管理员补丁入口：
 
@@ -144,7 +144,15 @@ install-uac.vbs
 3. 以管理员权限创建一次性 SYSTEM 任务修改当前版本的资源文件；
 4. 通过 AppX 包身份重新启动 Claude。
 
-说明：WindowsApps 目录通常只有 `SYSTEM` / `TrustedInstaller` 可写，管理员账号也可能只有读取权限。脚本不会修改 WindowsApps ACL，也不会 takeown；只使用一次性 SYSTEM 计划任务完成补丁写入。
+`launch.ps1` 的智能检测逻辑是：
+
+1. 定位当前最新 AppX / MSIX Claude 安装目录；
+2. 对比补丁资源和当前安装目录资源的 SHA256；
+3. 资源一致时直接启动，不写安装目录；
+4. 资源漂移时才弹 UAC，运行一次 `install-appx.ps1 -NoLaunch` 补丁；
+5. 补丁完成后再通过 AppX 包身份启动 Claude。
+
+说明：WindowsApps 目录通常只有 `SYSTEM` / `TrustedInstaller` 可写，管理员账号也可能只有读取权限。脚本不会修改 WindowsApps ACL，也不会 takeown；只在用户确认 UAC 后使用一次性 SYSTEM worker 完成补丁写入，执行完即清理，不注册常驻计划任务。
 
 也可以手动执行：
 
@@ -339,16 +347,16 @@ node .\scripts\sync-from-installed.mjs --app-dir "C:\Users\you\AppData\Local\Ant
 ## 打包 Release
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 1.11187.1
+powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 1.11187.4
 ```
 
 输出：
 
 ```text
-dist/claude-desktop-zh-cn-patch-windows-1.11187.1.zip
-dist/claude-desktop-zh-cn-patch-macos-1.11187.1.tar.gz
-dist/claude-desktop-zh-cn-patch-linux-1.11187.1.tar.gz
-dist/release-manifest-1.11187.1.json
+dist/claude-desktop-zh-cn-patch-windows-1.11187.4.zip
+dist/claude-desktop-zh-cn-patch-macos-1.11187.4.tar.gz
+dist/claude-desktop-zh-cn-patch-linux-1.11187.4.tar.gz
+dist/release-manifest-1.11187.4.json
 ```
 
 Release 包只包含补丁项目文件，不包含 Claude Desktop 本体。
@@ -380,6 +388,8 @@ scripts/
   verify.ps1
 
 install.ps1
+install-appx.ps1
+install-appx-system-worker.ps1
 restore.ps1
 install.sh
 restore.sh
@@ -415,7 +425,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -NoForceEnglishSlot
 
 ### Claude 更新后还有效吗？
 
-不一定。Claude 更新可能覆盖资源文件，也可能新增文案。更新后如果界面恢复英文，请重新运行安装脚本。大版本变化后可能需要重新同步语言表和补充替换词表。
+Windows AppX / MSIX 版建议使用 `launch.ps1` 或桌面快捷方式启动。启动器会先做 hash 检测，Claude 更新后如果新目录资源恢复英文，会弹 UAC 重新补丁一次。大版本变化后仍可能需要重新同步语言表和补充替换词表。
 
 ### 能直接把打好补丁的 Claude 发给别人吗？
 
@@ -423,7 +433,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -NoForceEnglishSlot
 
 ## 已知限制
 
-- Windows 已按 Claude Desktop AppX / MSIX `1.11187.1` 实机验证。
+- Windows 已按 Claude Desktop AppX / MSIX `1.11187.4` 实机验证。
 - macOS / Linux 使用同一套资源补丁逻辑，但仍需要对应系统实机复测。
 - 新版新增 key 仍有部分英文回落，需要持续补翻。
 - 服务端返回的动态文案、模型错误、账号状态、历史会话标题、用户自定义项目名不会全部自动翻译。
