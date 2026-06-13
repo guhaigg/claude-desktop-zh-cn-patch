@@ -239,19 +239,65 @@ export function resolveClaudeTarget({ appDir, platform = process.platform } = {}
   };
 }
 
-export function getPatchFileEntries({ forceEnglishSlot = true } = {}) {
-  const entries = [
-    { relativePath: "zh-CN.json", sourcePath: path.join(patchRoot, "zh-CN.json") },
-    { relativePath: path.join("ion-dist", "i18n", "zh-CN.json"), sourcePath: path.join(patchRoot, "ion-dist", "i18n", "zh-CN.json") },
-    { relativePath: path.join("ion-dist", "i18n", "statsig", "zh-CN.json"), sourcePath: path.join(patchRoot, "ion-dist", "i18n", "statsig", "zh-CN.json") },
+export function getPatchResourceSets() {
+  return [
+    {
+      name: "root",
+      baseRelativePath: "en-US.json",
+      zhRelativePath: "zh-CN.json",
+      enRelativePath: "en-US.json",
+      optional: false,
+    },
+    {
+      name: "ion",
+      baseRelativePath: path.join("ion-dist", "i18n", "en-US.json"),
+      zhRelativePath: path.join("ion-dist", "i18n", "zh-CN.json"),
+      enRelativePath: path.join("ion-dist", "i18n", "en-US.json"),
+      optional: false,
+    },
+    {
+      name: "statsig",
+      baseRelativePath: path.join("ion-dist", "i18n", "statsig", "en-US.json"),
+      zhRelativePath: path.join("ion-dist", "i18n", "statsig", "zh-CN.json"),
+      enRelativePath: path.join("ion-dist", "i18n", "statsig", "en-US.json"),
+      optional: true,
+    },
+    {
+      name: "dynamic",
+      baseRelativePath: path.join("ion-dist", "i18n", "dynamic", "en-US.json"),
+      zhRelativePath: path.join("ion-dist", "i18n", "dynamic", "zh-CN.json"),
+      enRelativePath: path.join("ion-dist", "i18n", "dynamic", "en-US.json"),
+      optional: true,
+    },
   ];
+}
 
-  if (forceEnglishSlot) {
-    entries.push(
-      { relativePath: "en-US.json", sourcePath: path.join(patchRoot, "en-US.json") },
-      { relativePath: path.join("ion-dist", "i18n", "en-US.json"), sourcePath: path.join(patchRoot, "ion-dist", "i18n", "en-US.json") },
-      { relativePath: path.join("ion-dist", "i18n", "statsig", "en-US.json"), sourcePath: path.join(patchRoot, "ion-dist", "i18n", "statsig", "en-US.json") },
-    );
+function targetHasResourceSet(resourcesDir, resourceSet) {
+  if (!resourcesDir || !resourceSet.optional) {
+    return true;
+  }
+  return fileExists(path.join(resourcesDir, resourceSet.baseRelativePath));
+}
+
+export function getPatchFileEntries({ forceEnglishSlot = true, resourcesDir } = {}) {
+  const entries = [];
+
+  for (const resourceSet of getPatchResourceSets()) {
+    if (!targetHasResourceSet(resourcesDir, resourceSet)) {
+      continue;
+    }
+
+    entries.push({
+      relativePath: resourceSet.zhRelativePath,
+      sourcePath: path.join(patchRoot, resourceSet.zhRelativePath),
+    });
+
+    if (forceEnglishSlot) {
+      entries.push({
+        relativePath: resourceSet.enRelativePath,
+        sourcePath: path.join(patchRoot, resourceSet.enRelativePath),
+      });
+    }
   }
 
   return entries.filter((entry) => fileExists(entry.sourcePath));
@@ -387,7 +433,9 @@ export function applyHardcodedReplacements(session, resourcesDir, replacements) 
   }
 
   const matchedPhrases = new Set();
+  const alreadyPatchedPhrases = new Set();
   const changedFiles = [];
+  const alreadyPatchedFiles = new Map();
   const jsFiles = fs.readdirSync(assetRoot, { withFileTypes: true })
     .filter((entry) => entry.isFile() && entry.name.endsWith(".js"))
     .map((entry) => path.join(assetRoot, entry.name));
@@ -412,6 +460,13 @@ export function applyHardcodedReplacements(session, resourcesDir, replacements) 
     }
 
     if (nextText === originalText) {
+      for (const entry of replacements) {
+        if (originalText.includes(entry.replace)) {
+          const relativePath = path.relative(resourcesDir, filePath);
+          alreadyPatchedPhrases.add(entry.find);
+          alreadyPatchedFiles.set(relativePath, { relativePath, targetPath: filePath });
+        }
+      }
       continue;
     }
 
@@ -436,7 +491,9 @@ export function applyHardcodedReplacements(session, resourcesDir, replacements) 
   return {
     assetRoot,
     changedFiles,
+    alreadyPatchedFiles: [...alreadyPatchedFiles.values()],
     matchedPhrases: [...matchedPhrases].sort(),
+    alreadyPatchedPhrases: [...alreadyPatchedPhrases].sort(),
     unmatchedPhrases: replacements.map((entry) => entry.find).filter((phrase) => !matchedPhrases.has(phrase)),
   };
 }

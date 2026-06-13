@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import {
+  getPatchResourceSets,
   parseArgs,
   patchRoot,
   readJson,
@@ -43,7 +44,7 @@ function mergeTranslations(baseObject, translatedObject) {
   return { result, reused, fallback, manual, source };
 }
 
-function syncOne({ basePath, zhPath, enPath }) {
+function syncOne({ name, basePath, zhPath, enPath }) {
   const baseObject = readJson(basePath);
   const previousZh = fs.existsSync(zhPath) ? readJson(zhPath) : {};
   const previousEn = fs.existsSync(enPath) ? readJson(enPath) : {};
@@ -55,7 +56,7 @@ function syncOne({ basePath, zhPath, enPath }) {
   writeJson(enPath, enMerged.result);
 
   return {
-    file: path.relative(patchRoot, zhPath).replaceAll("\\", "/").replace("/zh-CN.json", ""),
+    file: name,
     totalKeys: Object.keys(baseObject).length,
     zhFallback: zhMerged.fallback,
     enFallback: enMerged.fallback,
@@ -68,23 +69,27 @@ const args = parseArgs(process.argv.slice(2));
 const target = resolveClaudeTarget({ appDir: args["app-dir"] });
 
 const summaries = [];
-summaries.push(syncOne({
-  basePath: path.join(target.resourcesDir, "en-US.json"),
-  zhPath: path.join(patchRoot, "zh-CN.json"),
-  enPath: path.join(patchRoot, "en-US.json"),
-}));
-summaries.push(syncOne({
-  basePath: path.join(target.resourcesDir, "ion-dist", "i18n", "en-US.json"),
-  zhPath: path.join(patchRoot, "ion-dist", "i18n", "zh-CN.json"),
-  enPath: path.join(patchRoot, "ion-dist", "i18n", "en-US.json"),
-}));
-summaries.push(syncOne({
-  basePath: path.join(target.resourcesDir, "ion-dist", "i18n", "statsig", "en-US.json"),
-  zhPath: path.join(patchRoot, "ion-dist", "i18n", "statsig", "zh-CN.json"),
-  enPath: path.join(patchRoot, "ion-dist", "i18n", "statsig", "en-US.json"),
-}));
+const skipped = [];
+for (const resourceSet of getPatchResourceSets()) {
+  const basePath = path.join(target.resourcesDir, resourceSet.baseRelativePath);
+  if (!fs.existsSync(basePath)) {
+    skipped.push({
+      file: resourceSet.name,
+      reason: `Installed resource not found: ${resourceSet.baseRelativePath.replaceAll("\\", "/")}`,
+    });
+    continue;
+  }
+
+  summaries.push(syncOne({
+    name: resourceSet.name,
+    basePath,
+    zhPath: path.join(patchRoot, resourceSet.zhRelativePath),
+    enPath: path.join(patchRoot, resourceSet.enRelativePath),
+  }));
+}
 
 console.log(JSON.stringify({
   target,
   synced: summaries,
+  skipped,
 }, null, 2));

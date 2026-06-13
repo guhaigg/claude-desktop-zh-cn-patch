@@ -1,0 +1,1248 @@
+{
+  "generatedAt": "2026-06-13T05:05:20.841Z",
+  "appDir": "/Applications/Claude.app/Contents/Resources",
+  "resources": {
+    "root": {
+      "totalKeys": 425,
+      "equalToEnglish": 3,
+      "invariant": 3,
+      "shortUi": 0,
+      "sentence": 0,
+      "longForm": 0,
+      "samples": {
+        "shortUi": [],
+        "sentence": [],
+        "longForm": []
+      }
+    },
+    "ion": {
+      "totalKeys": 16178,
+      "equalToEnglish": 13637,
+      "invariant": 129,
+      "shortUi": 9743,
+      "sentence": 3412,
+      "longForm": 353,
+      "samples": {
+        "shortUi": [
+          {
+            "key": "+/yYn89HLV",
+            "english": "AWS config directory"
+          },
+          {
+            "key": "+0X5KLGaKQ",
+            "english": "Scanning..."
+          },
+          {
+            "key": "+1pcHyi+yy",
+            "english": "Direct people to the sales team when asked about pricing or contracts"
+          },
+          {
+            "key": "+2cz4BweqX",
+            "english": "Sidebar failed to load."
+          },
+          {
+            "key": "+3JTZ35T5m",
+            "english": "Learn how to use this feature safely"
+          },
+          {
+            "key": "+3dQ8dsCYA",
+            "english": "Couldn't save image."
+          },
+          {
+            "key": "+4r/aaeR9v",
+            "english": "Searching for sources..."
+          },
+          {
+            "key": "+57GhlYuNS",
+            "english": "Allow using Claude Design to generate design artifacts."
+          },
+          {
+            "key": "+5F39RhvzJ",
+            "english": "Evaluate architecture tradeoffs"
+          },
+          {
+            "key": "+5pVgQAZZr",
+            "english": "What this URL is overriding"
+          },
+          {
+            "key": "+5pvdmU3mN",
+            "english": " — not enabled"
+          },
+          {
+            "key": "+6Z5NiiSnz",
+            "english": "Which plan?"
+          },
+          {
+            "key": "+7tWzJ3/oJ",
+            "english": "Get notified when Claude is available in your region."
+          },
+          {
+            "key": "+7wBOtcfgZ",
+            "english": "Repurpose this blog post across channels"
+          },
+          {
+            "key": "+8+Afje+QL",
+            "english": "Define a collection of users"
+          },
+          {
+            "key": "+8IhNp9f3r",
+            "english": "Failed to update default plugin preference."
+          },
+          {
+            "key": "+8rK+ibc/t",
+            "english": "For a better first pass, add details like format and audience upfront."
+          },
+          {
+            "key": "+9OxliPjhC",
+            "english": "Analyze game theory applications"
+          },
+          {
+            "key": "+9Y66VlT9i",
+            "english": "Move to project"
+          },
+          {
+            "key": "+9t5VQ7tT6",
+            "english": "Payment confirmation failed. You can try again."
+          },
+          {
+            "key": "+AQagzW8cG",
+            "english": "Secure VM features"
+          },
+          {
+            "key": "+BfjdtnaRc",
+            "english": "Setup failed"
+          },
+          {
+            "key": "+Bvqi7XleM",
+            "english": "Unsafe URL blocked (only http/https are allowed)."
+          },
+          {
+            "key": "+DB/t6WTki",
+            "english": "What was unsatisfying about this response?"
+          },
+          {
+            "key": "+DFdFHgmud",
+            "english": "Write an investor update"
+          },
+          {
+            "key": "+Dr7nbm4fK",
+            "english": "Build a QBR deck for a customer"
+          },
+          {
+            "key": "+EKGekH4j6",
+            "english": "Match a writing style"
+          },
+          {
+            "key": "+EMCTV7ApV",
+            "english": "How often does it happen?"
+          },
+          {
+            "key": "+EqGNX0pPR",
+            "english": "Supply chain manager"
+          },
+          {
+            "key": "+FZFCp8qnz",
+            "english": "just now"
+          },
+          {
+            "key": "+FiyOTaUCW",
+            "english": "Not supported"
+          },
+          {
+            "key": "+FjNytD5eb",
+            "english": "Your gift link is ready to share"
+          },
+          {
+            "key": "+G0QLv/JLv",
+            "english": "60 days"
+          },
+          {
+            "key": "+G68MpAlMw",
+            "english": "Used Preview"
+          },
+          {
+            "key": "+G77+dnJx6",
+            "english": "No microphone was found. You can connect a microphone and try again."
+          },
+          {
+            "key": "+H5Un2TELW",
+            "english": "Why this banner is shown"
+          },
+          {
+            "key": "+HMSZwlCyC",
+            "english": "Enter amount"
+          },
+          {
+            "key": "+HZLmwCuKY",
+            "english": "Your first chat with Claude"
+          },
+          {
+            "key": "+IDV5qdzWq",
+            "english": "Gardener"
+          },
+          {
+            "key": "+IIW8aX0N1",
+            "english": "Receptionist"
+          },
+          {
+            "key": "+IJtuFJicj",
+            "english": "Public Projects"
+          },
+          {
+            "key": "+J17tTSxMS",
+            "english": "Create API key"
+          },
+          {
+            "key": "+JMZV5tZun",
+            "english": "Your account could not be prepared. Refresh the page to try again."
+          },
+          {
+            "key": "+JS8Dszgom",
+            "english": "Re-sync"
+          },
+          {
+            "key": "+JpRSGdksS",
+            "english": "Failed to archive project. You can try again."
+          },
+          {
+            "key": "+K4VsBTSzT",
+            "english": "Client State"
+          },
+          {
+            "key": "+KfP5/XHxP",
+            "english": "Move pane down"
+          },
+          {
+            "key": "+MAw1wUccW",
+            "english": "Learning & studying"
+          },
+          {
+            "key": "+MZsFNAKNO",
+            "english": "File is too large to export. Maximum size is 30 MB."
+          },
+          {
+            "key": "+MxL8DZZiQ",
+            "english": "Allow your team to run multi-agent workflows in Claude Code."
+          },
+          {
+            "key": "+NKbYUQl7m",
+            "english": "Some plugins in this marketplace have validation errors."
+          },
+          {
+            "key": "+On7CFwfGv",
+            "english": "Set project instructions"
+          },
+          {
+            "key": "+PMqUNutxd",
+            "english": "Change location for Cowork files?"
+          },
+          {
+            "key": "+Pd7+psY0z",
+            "english": "Audit a page for UX issues"
+          },
+          {
+            "key": "+PtKJEaqHJ",
+            "english": "user@myserver.com or a host from ~/.ssh/config"
+          },
+          {
+            "key": "+QXSAYTW01",
+            "english": "Try Claude Code to build, debug, and ship just by describing what you need"
+          },
+          {
+            "key": "+R7UL6qWOI",
+            "english": "At minute"
+          },
+          {
+            "key": "+RhnH+vFLO",
+            "english": "Empty"
+          },
+          {
+            "key": "+RxKfK1/XK",
+            "english": "Run on a recurring cron schedule"
+          },
+          {
+            "key": "+SHYf0vbtW",
+            "english": "Exit summary view"
+          },
+          {
+            "key": "+STPowGau4",
+            "english": "Most connected integrations"
+          },
+          {
+            "key": "+UTJD9uDf0",
+            "english": "Log out of current session"
+          },
+          {
+            "key": "+Ut1Q/4Hnc",
+            "english": "Your ticket to building, faster"
+          },
+          {
+            "key": "+V/48rBEwQ",
+            "english": "Plan content calendars"
+          },
+          {
+            "key": "+VEF35/UNH",
+            "english": "Mobile camera access"
+          },
+          {
+            "key": "+WOEzJDN46",
+            "english": "Enterprise search across your organization"
+          },
+          {
+            "key": "+XRRgmkPyP",
+            "english": "You can automatically buy more extra usage when you run low."
+          },
+          {
+            "key": "+XSkrzcF/0",
+            "english": "No tools available"
+          },
+          {
+            "key": "+Xpp5eIMu9",
+            "english": "How should I spin off this task for you?"
+          },
+          {
+            "key": "+XvhFRQllk",
+            "english": "Drop settings.json here"
+          },
+          {
+            "key": "+Ya/mx2wNT",
+            "english": "Grant admin pre-consent for your organization"
+          },
+          {
+            "key": "+Yrv348t7P",
+            "english": "Failed to delete routine."
+          },
+          {
+            "key": "+Yw0QZgv1B",
+            "english": "Inference configuration"
+          },
+          {
+            "key": "+ZLTl3VMv+",
+            "english": "Stop this task"
+          },
+          {
+            "key": "+aRxRwnb/f",
+            "english": "When you sign in to Claude Code, your authorization tokens will appear here."
+          },
+          {
+            "key": "+aUKGm2IHp",
+            "english": "the Bedrock control-plane"
+          },
+          {
+            "key": "+ahlyNU6N8",
+            "english": "You already have a plugin with that name. Choose a different one."
+          },
+          {
+            "key": "+buiR5JusD",
+            "english": "Don't have the chrome extension yet?"
+          },
+          {
+            "key": "+cT/mSO5N7",
+            "english": "AI-powered artifacts disabled"
+          },
+          {
+            "key": "+cnSeFA2y2",
+            "english": "Set up projects with files and context Claude can always reference"
+          },
+          {
+            "key": "+dTxnpark1",
+            "english": "run a workflow"
+          },
+          {
+            "key": "+eCdFutY11",
+            "english": "Read my eval metrics"
+          },
+          {
+            "key": "+fWJIhipmV",
+            "english": "coding"
+          },
+          {
+            "key": "+fp/VlXIw2",
+            "english": "Only existing users can sign in. New registrations are blocked."
+          },
+          {
+            "key": "+gBb3x0fj/",
+            "english": "X-Header-Name"
+          },
+          {
+            "key": "+gDbN9Jwgw",
+            "english": "We’ll send a reminder when your free trial is ending."
+          },
+          {
+            "key": "+gKYpZvxXf",
+            "english": "Start fresh with a separate project"
+          },
+          {
+            "key": "+gRnOaBZi9",
+            "english": "required"
+          },
+          {
+            "key": "+gWNjV9UOe",
+            "english": "Marketing analytics"
+          },
+          {
+            "key": "+i6kfVZs4O",
+            "english": "Select a role"
+          },
+          {
+            "key": "+jEI/ChslN",
+            "english": "Clean up my Downloads folder"
+          },
+          {
+            "key": "+jEQog5/Bd",
+            "english": "Reading memory…"
+          },
+          {
+            "key": "+jKBfnjUIk",
+            "english": "Save Configuration"
+          },
+          {
+            "key": "+jfKVKRlw7",
+            "english": "This isn't working right now. You can try again later."
+          },
+          {
+            "key": "+jl8kGm4v6",
+            "english": "Visualize anything"
+          },
+          {
+            "key": "+kJLFhw6NV",
+            "english": "Everything in Pro, plus:"
+          },
+          {
+            "key": "+l7a6xbFdg",
+            "english": "Combining overlapping findings…"
+          },
+          {
+            "key": "+lWQIJR5li",
+            "english": "Marketplace"
+          },
+          {
+            "key": "+lklpn9l/K",
+            "english": "Initial usage charge"
+          },
+          {
+            "key": "+lsh8v//5g",
+            "english": "Scroll right"
+          }
+        ],
+        "sentence": [
+          {
+            "key": "+0AXIvgEHO",
+            "english": "Your organization admin has disabled connectors in artifacts. To use this feature, ask your admin to enable connectors in artifacts."
+          },
+          {
+            "key": "+2vOinwM7O",
+            "english": "Point Claude Code at any existing repo or start from scratch. It picks up where you are."
+          },
+          {
+            "key": "+4bzVsrqlB",
+            "english": "Couldn't authorize — open the main Conway tab, or the container may have been replaced."
+          },
+          {
+            "key": "+4sNMiL2sh",
+            "english": "Enable Claude Code analytics to track how your team uses Claude Code. You can turn this on in <link>Claude Code organization settings</link>."
+          },
+          {
+            "key": "+4z6kt5Wz4",
+            "english": "Forked from {source}"
+          },
+          {
+            "key": "+6PpsCazwm",
+            "english": "The endpoint rejected the request. Check cert trust, IP allowlist, or auth headers."
+          },
+          {
+            "key": "+7yQr6BpSR",
+            "english": "You're on a free trial until {date}. Seats beyond your free allowance are charged at a prorated rate for the remaining trial days."
+          },
+          {
+            "key": "+8gBnYlGa5",
+            "english": "Your AWS token has expired. Please return to the AWS product page to re-initiate application setup."
+          },
+          {
+            "key": "+8nVZyI6SB",
+            "english": "<b>{category}</b> needs {count, plural, one {{label}} other {# fields}}"
+          },
+          {
+            "key": "+9qv0W3kKW",
+            "english": "Select {email}"
+          },
+          {
+            "key": "+AcqvUzRry",
+            "english": "Curious to learn more? <link>Try an example project</link>"
+          },
+          {
+            "key": "+EiT5beQUU",
+            "english": "No usage data yet — plan usage appears once limits load, and session usage after Claude's first reply"
+          },
+          {
+            "key": "+IZaBHZHsL",
+            "english": "This will delete all saved cookies, local storage, and other session data for Launch servers in all workspaces."
+          },
+          {
+            "key": "+KQxvbjpm+",
+            "english": "Data processing in progress.{br}Check back in a few days.{br}Confirm the {link} is installed if data doesn't appear."
+          },
+          {
+            "key": "+Lgjm6TdiG",
+            "english": "{sign}{count, plural, one {# Research Labs Premium seat} other {# Research Labs Premium seats}} (pro-rated year)"
+          },
+          {
+            "key": "+O3Pp52J+7",
+            "english": "Create a pool, generate a key, then point your runner deployment at it. Sessions will start landing on your infrastructure instead of Anthropic's."
+          },
+          {
+            "key": "+P0+mayg93",
+            "english": "Invited by {name}"
+          },
+          {
+            "key": "+PHv0lLCSo",
+            "english": "Save {percent}% ({discount})"
+          },
+          {
+            "key": "+XzYcMhsKi",
+            "english": "I consent to collection and use of my personal information in accordance with the <privacyLink>Privacy Policy</privacyLink>."
+          },
+          {
+            "key": "+a/6A0wnmw",
+            "english": "Q: {question}\nA: {option}"
+          },
+          {
+            "key": "+b6F7XjKgE",
+            "english": "Enable GitHub analytics to unlock PR and code metrics. You can turn this on in <link>Claude Code organization settings</link>."
+          },
+          {
+            "key": "+bAtbrummb",
+            "english": "Can you set up Cowork for me using {setupCommand}?"
+          },
+          {
+            "key": "+dM3720mbJ",
+            "english": "{serverName} needs authentication to use {toolName}"
+          },
+          {
+            "key": "+fJ96RK7sp",
+            "english": "Self-serve supports up to 500 seats. <link>Contact sales</link> for larger teams."
+          },
+          {
+            "key": "+iG8JNhLmB",
+            "english": "Folder with AWS config/credentials. Defaults to ~/.aws when no bearer token is set."
+          },
+          {
+            "key": "+iNZ+T4Hi5",
+            "english": "GitHub app required.{br}Install the {link} to view analytics."
+          },
+          {
+            "key": "+jEW2ge//S",
+            "english": "Works immediately with every repository you already have access to. Generate a token on github.com and paste it here."
+          },
+          {
+            "key": "+jn5I+1PC9",
+            "english": "Restricted by your organization's Managed settings. Update Managed settings or your MDM-deployed configuration to change this."
+          },
+          {
+            "key": "+nFaxtEr90",
+            "english": "We'll package up your conversations, projects, and settings for download. This might take some time to complete."
+          },
+          {
+            "key": "+o7cHhMcY0",
+            "english": "Created {count} memories"
+          },
+          {
+            "key": "+oLBeHixUl",
+            "english": "Claude Security requires usage credits to be turned on. Contact an organization admin to turn them on."
+          },
+          {
+            "key": "+r05Hpg92t",
+            "english": "When you delete this chat, you’ll also delete the published artifacts in this chat."
+          },
+          {
+            "key": "+rdj1cjyU5",
+            "english": "{count} seats at {pricePerSeat}/seat"
+          },
+          {
+            "key": "+tRn40sBkg",
+            "english": "Adding marketplaces is blocked by your organization's policy. Contact your administrator."
+          },
+          {
+            "key": "+tbu4xp/Hl",
+            "english": "If you end the interview now, you can't restart later. Keep chatting if you have more thoughts to share! Your insights so far are saved."
+          },
+          {
+            "key": "/4hWf27rYg",
+            "english": "I'll paste a writing sample, then share my draft. Analyze the sample's voice, sentence rhythm, and tone — then rewrite my draft to match it."
+          },
+          {
+            "key": "/6750qvS54",
+            "english": "Have a visual UI MCP App now? Email your carousel images to <link>{email}</link> and we'll attach them to your listing manually."
+          },
+          {
+            "key": "/7tAIdVl9o",
+            "english": "This runner's token is invalidated immediately. Its next API call will be rejected."
+          },
+          {
+            "key": "/8YH6FxJTa",
+            "english": "{count} standard seats"
+          },
+          {
+            "key": "/8fG7YnSUb",
+            "english": "Members must have an {domains} email address."
+          },
+          {
+            "key": "/8o4hUibO8",
+            "english": "{daysRemaining} trial days remaining"
+          },
+          {
+            "key": "/A0j9hR6YS",
+            "english": "Runs weekdays at {time} {tz}"
+          },
+          {
+            "key": "/AYumL75bA",
+            "english": "You are about to connect to a remote host via SSH. Claude will be able to read and modify files on this server."
+          },
+          {
+            "key": "/AuHXeEbpM",
+            "english": "Unrestricted internet access for maximum flexibility. Use caution with untrusted sources."
+          },
+          {
+            "key": "/E07QmvGZn",
+            "english": "The GitHub CLI enables creating PRs, monitoring CI, and merging directly from the desktop app."
+          },
+          {
+            "key": "/E4nCZRKhZ",
+            "english": "{n, plural, one {an agent} other {# agents}}"
+          },
+          {
+            "key": "/EjJtHJxer",
+            "english": "Usage credits keep you going when you hit your plan limits. If you're past a limit now, your current chat will get cut off."
+          },
+          {
+            "key": "/F3BARWVEw",
+            "english": "Your organization hasn't provided plugins. Contact your organization administrator to add them."
+          },
+          {
+            "key": "/HUoUvA4uE",
+            "english": "This connector doesn't use authentication. You can block individual tools instead."
+          },
+          {
+            "key": "/HcvzyHD/i",
+            "english": "Your admin can't lift the hold directly. If your organization has an Anthropic account team, your admin can ask them to flag your case for review — that's often the fastest path."
+          },
+          {
+            "key": "/HsT2PY0bw",
+            "english": "{months, plural, one {# month} other {# months}} on us. Enter your work email to get started — we'll send you a sign-in link."
+          },
+          {
+            "key": "/Iujc8Mk34",
+            "english": "{count, plural, one {Existing category “{values}” was} other {Existing categories “{values}” were}} not recognized and removed. Please re-select."
+          },
+          {
+            "key": "/JAsu9WM/K",
+            "english": "Anyone in {orgName} with the link can view"
+          },
+          {
+            "key": "/KPyOd/yWj",
+            "english": "Increase spend limit for {name}"
+          },
+          {
+            "key": "/LDGdNNjMG",
+            "english": "Updated to {sha}."
+          },
+          {
+            "key": "/Lv5usi1o2",
+            "english": "Enter the base URL. Cowork appends /v1/logs and /v1/metrics automatically — if you include one of those suffixes, it will be removed on save."
+          },
+          {
+            "key": "/LzCz+T6Ti",
+            "english": "Your organization requires you to sign in with a specific account. Log out and sign in with an approved account."
+          },
+          {
+            "key": "/MUFm4eSbh",
+            "english": "CHALLENGE {challengeNumber}"
+          },
+          {
+            "key": "/MflJmPNOU",
+            "english": "I need a draft — I'll describe what it is and who it's for. Ask me for any details you need, then write a first version I can edit."
+          },
+          {
+            "key": "/N6zPNqXaO",
+            "english": "The certificate names {purchaser}, not {nameToMatch}. It will be reviewed manually instead of applying automatically."
+          },
+          {
+            "key": "/NB+TAjGNv",
+            "english": "You're now past your plan's included usage. Your weekly limit resets {day} at {time}."
+          },
+          {
+            "key": "/OQn9Z8Z7v",
+            "english": "Permission mode couldn't be changed: {reason}"
+          },
+          {
+            "key": "/Ow+Bmn99W",
+            "english": "An error occurred while processing your registration. Please try again or contact support if the problem persists."
+          },
+          {
+            "key": "/PjeqYiSOL",
+            "english": "{low} – {high} / mo"
+          },
+          {
+            "key": "/TYk+Fa2lO",
+            "english": "Explain a legal concept in plain English — I'll name it; cover when it typically comes up and how it affects the parties involved."
+          },
+          {
+            "key": "/TaP3pShV1",
+            "english": "Couldn't find {serverName}'s sign-in configuration. The server's OAuth setup may be incomplete or not publicly reachable."
+          },
+          {
+            "key": "/Tbe/LQAJm",
+            "english": "Good morning, {name}"
+          },
+          {
+            "key": "/TilRc4Vfe",
+            "english": "Or text {smsNumber}"
+          },
+          {
+            "key": "/UoXLuqkgW",
+            "english": "Use your SSO Identity Provider to add new members to your Enterprise organization."
+          },
+          {
+            "key": "/VQpyOVqYe",
+            "english": "Expires {date}"
+          },
+          {
+            "key": "/WafiQssBm",
+            "english": "Holding {keys}"
+          },
+          {
+            "key": "/Z5r17Iwb2",
+            "english": "With Cowork, Claude can work directly in your folders or browser tabs. Organize screenshots, analyze receipts, draft docs from your notes—whatever's on your to-do list."
+          },
+          {
+            "key": "/a5lDMkNC5",
+            "english": "Malicious actors can hide instructions in websites, emails, and documents that trick AI into taking harmful actions without your knowledge, including:"
+          },
+          {
+            "key": "/an+9Ro/tl",
+            "english": "If you intended to log into <link>Anthropic Console</link>, please navigate to that page and try again."
+          },
+          {
+            "key": "/b6aMD/Bvp",
+            "english": "Runs at: {date}"
+          },
+          {
+            "key": "/byt/0F8Lp",
+            "english": "Don't use device management? Team members can install directly from <link>claude.com/download</link>."
+          },
+          {
+            "key": "/cqjioq+55",
+            "english": "Editing {fileName}…"
+          },
+          {
+            "key": "/dJ//G7jPC",
+            "english": "New conversations return to the default instead of the member's last-used model. Members can still switch models within a conversation. Also applies to role defaults."
+          },
+          {
+            "key": "/e5nr3MIv3",
+            "english": "{name}, folder"
+          },
+          {
+            "key": "/eko5+XYRM",
+            "english": "Payment processing failed to load. If you have an ad blocker or privacy extension enabled, please disable it and try again."
+          },
+          {
+            "key": "/fzEZHitbq",
+            "english": "Review complete — {n, plural, =0 {no issues found} one {# issue found} other {# issues found}}"
+          },
+          {
+            "key": "/hgypvsrtJ",
+            "english": "{size} KB"
+          },
+          {
+            "key": "/iWq83HwDw",
+            "english": "You’re currently using a trial version of Pro. You’ll be billed for Pro at {price} / year on {billingStartDate}."
+          },
+          {
+            "key": "/jNwaAHdg9",
+            "english": "Your message will exceed the maximum number of files allowed per message. Consider removing some of your files or adding files over several messages."
+          },
+          {
+            "key": "/kaSYf8LkE",
+            "english": "Connected · {latency}ms"
+          },
+          {
+            "key": "/m3o1Ontbw",
+            "english": "Reducing seats isn't supported on this plan. Contact your account team to adjust your allocation."
+          },
+          {
+            "key": "/mCoauj3Ws",
+            "english": "Uploaded file is too large. Try uploading a smaller part of the document, or copy/pasting an excerpt from the file."
+          },
+          {
+            "key": "/oylr2HQ2V",
+            "english": "Claude will work in an isolated copy of your repo so you can keep working without conflicts."
+          },
+          {
+            "key": "/oz1VumDrX",
+            "english": "Project: {name}"
+          },
+          {
+            "key": "/r1dlmQouE",
+            "english": "{label} configuration"
+          },
+          {
+            "key": "/sB4jomZAf",
+            "english": "Pick your seats and enter a payment method. The order details below show today's charge."
+          },
+          {
+            "key": "/teGfAcxuY",
+            "english": "Saved to {path}"
+          },
+          {
+            "key": "/uOyQ2pywC",
+            "english": "This account isn't eligible for a team trial. Contact support if you believe this is an error."
+          },
+          {
+            "key": "/ukfRhW2pa",
+            "english": "By clicking Pay now, you agree to Anthropic's <link>Commercial Terms of Service</link>. Usage purchases expire 1 year after purchase, subject to applicable law."
+          },
+          {
+            "key": "/xFsN0+icg",
+            "english": "This offer isn't available in {currency}"
+          },
+          {
+            "key": "/zBewcOy3f",
+            "english": "Your organization's policy has blocked access to this folder. Choose a folder inside an allowed workspace, or contact your IT team."
+          },
+          {
+            "key": "/zFGgPmQSV",
+            "english": "+{count} more"
+          },
+          {
+            "key": "0++lmNha80",
+            "english": "Domains where this credential can be sent. Wildcard only as the leftmost label (e.g. *.example.com)."
+          },
+          {
+            "key": "01+wvmSaB8",
+            "english": "Your organization has reached the maximum of {limit} groups. Remove an existing group before creating a new one."
+          },
+          {
+            "key": "03A87ql5DH",
+            "english": "Issuer URLs the OAuth sign-in may use, as a JSON array. Pre-filled by presets; ask your IdP admin if unsure."
+          }
+        ],
+        "longForm": [
+          {
+            "key": "+GKWHWveHu",
+            "english": "Build me a 3-year financial model — base, bull, and bear cases, linked formulas, sensitivity table. Pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "+LdPdU9SjP",
+            "english": "I found a few strong examples. The best ones all lead with a sharp metric — like \"We’re losing 12 hours/week to manual reporting.\" Then they tie it to a dollar figure before pitching the fix."
+          },
+          {
+            "key": "+yp3XZsJU6",
+            "english": "Automatically append offline_access to scopes so the IdP returns a refresh token for silent refresh. Turn off only if your authorization server rejects offline_access as an unknown scope; include the server's own refresh-token scope in Scopes instead."
+          },
+          {
+            "key": "+zKCYQeyvX",
+            "english": "I want to create a visual design or mockup. Give me space to share what I'm designing. I might have wireframes, inspiration, or brand guidelines. Once I've laid that out, help me think through the details with follow-up questions. Only start building once we've agreed on the direction."
+          },
+          {
+            "key": "/7F0mRnJdD",
+            "english": "Ask them to return to AWS Marketplace, click “Set up your account” again, and enter their own email address. If you don't know who manages Claude at your company, contact your IT team or Anthropic support."
+          },
+          {
+            "key": "/UWVWsb2by",
+            "english": "This upgrade link is for an organization this account doesn't have access to upgrade. You can create a new organization below, or sign in with an account that manages that organization."
+          },
+          {
+            "key": "/VWFrp+GsY",
+            "english": "I want to build a cold outreach email sequence. Give me space to share my target audience, product, and value proposition. Check if my Gmail is connected since it could help reference past outreach or communication style. Ask follow-up questions about tone, sequence length, and what's worked before. Then draft an outreach sequence we can refine together."
+          },
+          {
+            "key": "/Vj7RXZdgy",
+            "english": "Help me plan and optimize my week. I have my Google Calendar open and ready for you to review and edit.\n\nFirst, review my calendar and show me a summary:\n- Total meetings\n- Busiest days\n- Where I have gaps of 2+ hours\n\nBefore proposing changes, ask me about:\n- What I'm trying to accomplish this week\n- How much focus time I need and for what\n- Any deadlines or commitments not on my calendar\n- Which types of meetings I should decline or shorten\n- Personal commitments or boundaries I want to protect\n\nThen show me your top 3-5 proposed changes with explanations:\n- Focus blocks to add\n- Meetings to decline or reschedule\n- Time conflicts to resolve\n\nStart with the highest-impact changes first. Once I approve each change, make the edits directly in my calendar one at a time."
+          },
+          {
+            "key": "/uRhEqshs6",
+            "english": "Set up a campaign performance dashboard — spend, CPA, and conversions vs goal by channel and creative, plus a 'top performers' cut and a 'needs attention' cut. Use some sample campaigns to start. We can paste in my numbers or connect my ad accounts later."
+          },
+          {
+            "key": "/wn5Lc4U8b",
+            "english": "I want to build an objection handling guide for my sales team. Give me space to share our product, the common objections we hear, and our competitive advantages. I might have existing materials or CRM data to pull from. Follow up on anything that's unclear, then create a structured guide with each objection, recommended responses, and supporting proof points for us to review."
+          },
+          {
+            "key": "05sWumUU1+",
+            "english": "The default host-native mode starts faster and works behind restricted networks. Shell commands run inside the VM; file tools run on the host with path-based access control. Enable this only if your security review requires the agent loop itself to run in the VM."
+          },
+          {
+            "key": "0HwnHTG0mG",
+            "english": "I want to analyze customer feedback. Let me share the feedback and tell you what I'm looking to understand. Follow up on anything that's unclear, then surface the key themes, sentiment patterns, and actionable takeaways for us to review."
+          },
+          {
+            "key": "0Q0LSkUwGw",
+            "english": "This feature gives Claude internet access to create and analyze files, which has <a>security risks</a>. Admins should assess whether this capability meets their organization's security and compliance standards. "
+          },
+          {
+            "key": "0VqpBZtV5d",
+            "english": "Connect our backlog so you can see what's shipping. Surface the Linear, Jira, and GitHub connectors so I can hook up whichever we use — or, if one's already connected, just confirm what you can see."
+          },
+          {
+            "key": "0bUTWuqAoP",
+            "english": "I'm so tired of feeling like the only one struggling. Everyone else moves on and I'm still stuck. I studied all weekend and got a 58. I don't know what I'm doing wrong. I used to think I was smart and now I just feel like I've been faking it this whole time."
+          },
+          {
+            "key": "0kTK2ONcnO",
+            "english": "By clicking to accept, you represent and warrant that: (i) you are the individual registered to this administrator account; (ii) you have full legal authority to bind {organization} to this BAA; (iii) you have read and understand this BAA and the Implementation Guide; and (iv) you agree, on behalf of your Organization, to the terms and conditions of this BAA."
+          },
+          {
+            "key": "141ApHd27L",
+            "english": "Set up a weekly marketing metrics review for leadership — pipeline vs goal, engagement by segment, biggest gaps, and what to watch — drafted as a doc plus Slack post for me to review before posting. Use this template, and pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "1E6JdL3NXd",
+            "english": "I want to create a competitive analysis deck. Give me space to share what I'm working with: existing research, data, or examples of what I'm going for. Once that's down, help me sharpen the framing with follow-up questions. Only start building the deck once we've aligned on the story and structure."
+          },
+          {
+            "key": "1LlppFGnYb",
+            "english": "Set up a product metrics dashboard — DAU/WAU, weekly retention, funnel conversion, feature adoption, plus a quick read on the trends. Pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "1Wd8/ZQ+lW",
+            "english": "By clicking the button below, I understand that Section F of the <serviceTerms>Service Specific Terms</serviceTerms> applies to my organization’s use of Claude Enterprise and supplements my organization’s agreement with Anthropic. I acknowledge that Inputs, Outputs, and other data regarding my organization’s use of Claude Enterprise will be retained for 30 days and may be accessed by Anthropic for safety and security purposes."
+          },
+          {
+            "key": "1fHnAx5y8M",
+            "english": "Set up a pipeline dashboard — stages, pipeline value over time, and what needs attention this week. Pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "1gCQoqTe3O",
+            "english": "I want to turn some rough notes into a clear, professional document. Let me share the notes and tell you what format I need. Follow up on anything that's unclear, then draft the document for us to review and refine."
+          },
+          {
+            "key": "1zwutm0pLh",
+            "english": "Connect my books so you can see our actuals and expenses. Surface the NetSuite, Stripe, and Brex connectors so I can hook up whichever we use — or, if one's already connected, just confirm what you can see."
+          },
+          {
+            "key": "2IiG1AGCna",
+            "english": "We value user reports to uphold our platform’s integrity and improve our ability to enforce our Usage Policy. Unless you opt out, reports may be used to train models for use by our Trust & Safety team, consistent with Anthropic’s safety mission. Opt out of this use by changing the toggle above."
+          },
+          {
+            "key": "2X3wK/q67E",
+            "english": "I want to analyze an A/B test. Give me space to share the experiment setup, metrics, and data. I might have the raw data or experiment docs to upload. Follow up on anything that's unclear, then calculate statistical significance, effect sizes, and confidence intervals, and present a clear recommendation with supporting charts."
+          },
+          {
+            "key": "2c0cESbicz",
+            "english": "We use cookies to deliver and improve our services, analyze site usage, and if you agree, to customize or personalize your experience and market our services to you. You can read our Cookie Policy <link>here</link>."
+          },
+          {
+            "key": "2cj4Og2Jq7",
+            "english": "I can help with pretty much anything—work, projects, figuring stuff out—but I’m a lot more useful once I know what you’ve got going on. Give me a couple minutes and I’ll make this feel like yours:"
+          },
+          {
+            "key": "2glubHB8iN",
+            "english": "I want to automate a repetitive workflow. Give me space to walk you through what I currently do manually: the steps, the tools involved, and where it breaks down. Once that's down, help me think through the best approach with follow-up questions. Only start building once we've agreed on a plan."
+          },
+          {
+            "key": "2xeb49n9tz",
+            "english": "Set up a revenue dashboard — top-line trend, top customers, segment mix, and forecast vs actual. Use sample data first. We can connect my warehouse or send an export later to make it real."
+          },
+          {
+            "key": "3BDMxIIlWR",
+            "english": "Anthropic’s <link>Usage Policy</link> prohibits use of Claude for harmful use cases like producing violent, abusive, or deceptive content. Don’t share personal information or third-party content without permission."
+          },
+          {
+            "key": "3E7xUiUtFH",
+            "english": "I want to develop competitive positioning. Give me space to share what I know: my product, the competitors I'm watching, and where I think we stand. Once I've laid that out, help me think through the differentiation with follow-up questions. Only start crafting positioning statements and a competitive reference sheet once we've agreed on the angle. Then let's refine it together."
+          },
+          {
+            "key": "3FwfTvUOyJ",
+            "english": "Invite someone who can verify your company owns <b>{domain}</b> by creating a TXT record on your DNS provider and who can access administrative settings on your Identity Provider. They will be an Owner in your organization and will be able to adjust organization level settings and invite other members."
+          },
+          {
+            "key": "3qvMQVWyxg",
+            "english": "<strong>Exception:</strong> Claude Code stays available to your users but is not covered by the BAA. Only Claude Code with ZDR is covered by the BAA. Claude Code with ZDR is available only for qualified accounts and must be configured by your account team. To restrict Claude Code use within your organization, see <link>Role-based permissions</link>."
+          },
+          {
+            "key": "4XGeHv7RX0",
+            "english": "Leave blank to omit the sub claim and authenticate as the service account itself. For Google Workspace domain-wide delegation, enter the user email to impersonate (requires delegation already granted for the service account's client ID)."
+          },
+          {
+            "key": "4XdZthEtcv",
+            "english": "If you are reporting the content as violating our policies (including our terms or Usage Policy), please describe in detail why you believe the identified content is in violation of our policies, with specific citations to our policies wherever possible."
+          },
+          {
+            "key": "4b+sXOCW/0",
+            "english": "I want to prioritize my inbox. First, make sure Gmail is connected, and help me set it up if it's not. Then pull in recent emails, sort by urgency, and give me a prioritized list with draft replies for anything that needs a response today."
+          },
+          {
+            "key": "4b0titvGRH",
+            "english": "Your subscription includes a time-limited promotional discount. Your subscription will automatically renew at the discounted price of {discountedPrice} / {billingInterval, select, yearly {year} monthly {month} other {month}} (plus applicable taxes) until {promoEndDate} when you will be automatically downgraded back to your current subscription plan, unless you elect to keep Max."
+          },
+          {
+            "key": "5LrcsTyduj",
+            "english": "Claude will access your desktop (files, apps, and browser) to complete tasks you send from your phone. This may have security risks. Only pair devices that you own and trust. <safetyLink>Learn how to use this safely</safetyLink>"
+          },
+          {
+            "key": "5WOgIc+Fyx",
+            "english": "The MCP directory is where Claude users discover and connect to remote MCP servers. Once your server is reviewed and published, it's available across Claude products. Submission and inclusion in the directory <em>does not change the functionality of your connector</em>. It simply allows it to be listed."
+          },
+          {
+            "key": "5aj+KHCrxK",
+            "english": "Your subscription includes a time-limited promotional discount. It renews at {discountedPrice}/month (plus applicable taxes) until {promoEndDate}, when it renews at the regular price of {undiscountedPrice}/month (plus applicable taxes)."
+          },
+          {
+            "key": "5at+W4GX/M",
+            "english": "Injected on every proxied request to allowed hosts. The prefix is prepended to the secret when the header is sent — leave it empty to send the secret as-is. Values are write-only and never shown after saving."
+          },
+          {
+            "key": "5iF/QmGqKp",
+            "english": "Git for Windows is required to run local sessions. If it's already installed, set the {envVar} environment variable to the full path of bash.exe and restart the app — or switch to a remote environment."
+          },
+          {
+            "key": "5ma8gTrwCG",
+            "english": "Browser AI faces unique security risks, like prompt injection attacks, where malicious actors might try to trick Claude into unintended actions, such as sharing your bank information or deleting important files. While we’ve implemented protections, they aren’t foolproof. Attack vectors are constantly evolving and Claude may hallucinate, leading to actions that you did not intend. We’ve shared our testing results, including possible attack scenarios, so you can make informed decisions, and strongly encourage you to <risksLink>read about the risks</risksLink> before using this product. <blogLink>Read blog post</blogLink>"
+          },
+          {
+            "key": "6+10S68bv1",
+            "english": "With your permission, we will use your chats and coding sessions to train and improve our AI models. This helps us to 1) improve our AI models to make Claude more helpful and accurate for everyone and 2) develop more robust safeguards against harmful outputs."
+          },
+          {
+            "key": "64UdjaCi9j",
+            "english": "Creates tables for what you describe below and swaps any local-only state to real reads and writes. If a database isn't configured for this project yet, Claude will provision one first."
+          },
+          {
+            "key": "6HjndCURMx",
+            "english": "Customize the classification banner displayed at the top of the page for all users in your organization. When not set, the default banner from your environment configuration is used."
+          },
+          {
+            "key": "6JISQP9sUJ",
+            "english": "This is a copy of a chat between Claude and {sharedBy}. Content may include unverified or unsafe content that do not represent the views of Anthropic. Shared snapshot may contain attachments and data not displayed here."
+          },
+          {
+            "key": "6Xt83BBSfG",
+            "english": "By clicking ‘Subscribe’, you agree to Anthropic’s <terms>Commercial Terms</terms> including any <serviceTerms>Service Specific Terms</serviceTerms>, and you represent that you are authorized to enter this agreement by Customer. By providing your payment information, you allow Anthropic to charge your card in the amount above now and {billingInterval} until you cancel in accordance with our <cancellation>terms</cancellation>. You can cancel at any time."
+          },
+          {
+            "key": "6ikqSmZB2E",
+            "english": "I want to synthesize user research. Let me share the research sources: interviews, surveys, usability tests, or other data. I might have interview transcripts or survey results to upload. Follow up on anything that's unclear, then identify patterns, group findings into themes, and produce a summary with prioritized recommendations and supporting quotes."
+          },
+          {
+            "key": "71g/NJdeHK",
+            "english": "Designate which members can open tickets with the human support team, routing everyone else to Fin, our AI support assistant. After {date}, members outside your designated group get AI support only."
+          },
+          {
+            "key": "77jxB9SKCB",
+            "english": "I want to write a job description. Let me tell you about the role: the team, level, and what we're looking for. I might have an existing posting or format to match. Follow up on anything that's unclear, then draft a job posting with responsibilities, qualifications, and what makes the team worth joining."
+          },
+          {
+            "key": "79nxFSPrBl",
+            "english": "Require team members to verify their device before controlling local Claude Code sessions remotely. Members will be prompted to enroll the first time they connect from a new device. <link>Learn more</link>"
+          },
+          {
+            "key": "7HFalNigyO",
+            "english": "Projects help organize your work and leverage knowledge across multiple conversations. Upload docs, code, and files to create themed collections that Claude can reference again and again."
+          },
+          {
+            "key": "7I76Gt7pqd",
+            "english": "Put together a customer-ready QBR deck — pull recent news on the account, work it into the slides, end with a recommendation. Pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "7OWtEnspNS",
+            "english": "I want to analyze a dataset. Let me share the data and what I'm looking to learn before you dig in. Follow up on anything that's unclear, then give me a clear summary of findings for us to review."
+          },
+          {
+            "key": "7sXvnsxywE",
+            "english": "Claude Code Desktop already enforces your <link>Managed settings</link> and MDM-deployed configuration. This legacy toggle will be retired in an upcoming release. To keep an existing restriction in effect, set <code>permissions.disableBypassPermissionsMode</code> to <code>{value}</code> in Managed settings or via MDM."
+          },
+          {
+            "key": "7yCDEvvonp",
+            "english": "Set up a Monday morning command center — a tiled dashboard with cards for my action items, emails I haven't replied to, and meetings that need prep. Show me what it looks like with a sample week first. We can connect Slack, Gmail, and my calendar later to run it every Monday."
+          },
+          {
+            "key": "7ztpioCIau",
+            "english": "I want to draft a social post. Give me room to share the gist and the vibe I'm going for. Follow up on anything that's unclear, then give me a few different takes so we can bounce back and forth until one lands."
+          },
+          {
+            "key": "837vvR3GKV",
+            "english": "Hey Claude, I want to try scheduling a recurring task. Can you walk me through it? Ask me if I have something regular I'd like to automate. If I can't think of anything, suggest something and help me set it up. If I haven't connected the tools you'd need yet, help me do that first."
+          },
+          {
+            "key": "8x9xBv4SZT",
+            "english": "Help me untangle my work priorities. Before doing anything else, ask me what tools I use for work and help me connect them. Then look across my recent conversations, docs, and activity from the last few days and write up a briefing. Structure it as:\n- Urgent items (for these, pull the deeper context: who’s involved, what’s been discussed, what’s unresolved)\n- Conversations where I’m mentioned (read the full threads for context)\n- Threads I’m not in but should probably know about based on my current tasks\n- Tasks due this week and anything blocking them"
+          },
+          {
+            "key": "9/NIZHbeDd",
+            "english": "Only use extensions from developers you trust. Anthropic does not control which tools developers make available and cannot verify that they will work as intended or that they won't change."
+          },
+          {
+            "key": "9A0GxERYRT",
+            "english": "I want to map out a user flow. Give me room to share what I'm thinking: the feature, user goals, and entry points. Once I've laid that out, help me think through the edge cases with follow-up questions. Only start building the flow once we've aligned on the scope."
+          },
+          {
+            "key": "9Qm4oMKLGW",
+            "english": "Mock up 2-3 clickable mobile prototypes of a feature — each a different take — so my team can react to something real, not a doc. Pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "9Y6CwUr1CC",
+            "english": "Claude Code dynamic workflows turn on by default for all users on {date} and use more tokens than typical sessions. Decide who should have access: restrict by role with RBAC or turn them off org-wide with managed settings."
+          },
+          {
+            "key": "9issISabm4",
+            "english": "Help me plan my next vacation.\n\nBefore researching, ask me:\n- Where I'm thinking of going (or if I'm open to suggestions)\n- When I want to travel and for how long\n- What my budget is\n- What kind of trip I'm looking for (relaxing, adventure, cultural, food-focused, etc.)\n\nThen research the top 3 destinations that fit my criteria and show me a comparison:\n- Estimated costs\n- Best time to visit\n- What makes each unique\n\nOnce I pick my top choice, research that destination in detail:\n- Check current flight prices\n- Find 3-4 accommodation options\n- Suggest a day-by-day outline\n\nShow me this proposed itinerary with estimated costs before creating the final trip plan."
+          },
+          {
+            "key": "A/tIPVUUjX",
+            "english": "No configured groups have been detected in your IdP yet. Groups are recognized when an assigned user logs in, but enabling group mappings before your IdP is configured could result in users being unable to access the product."
+          },
+          {
+            "key": "A30swJoJat",
+            "english": "Calls are made with your connected account. Tool annotations are self-reported by the server and not verified by Anthropic — connect a test account with representative data where possible. Write/destructive tools are never called. Snippets of the tool responses are saved with your submission for Anthropic reviewers, so don't run this against a server holding real customer data."
+          },
+          {
+            "key": "AKjUeQzY7b",
+            "english": "I want to draft a performance review. Give me space to share the details: their accomplishments, areas for growth, and any specific feedback I want to include. I might have a template or past review to reference. Follow up on anything that's unclear, then draft a balanced review with clear examples and actionable development goals for us to refine."
+          },
+          {
+            "key": "AOC+33vwzD",
+            "english": "Write my weekly marketing review — pipeline vs goal, engagement by segment, biggest gaps, what to watch — for me to review before I post it. Pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "ATD1JX4gnq",
+            "english": "I want to audit a page or screen for UX issues. Give me space to share the URL or screenshots. Follow up on anything that's unclear, then review it for usability problems, accessibility issues, and visual inconsistencies, and produce a prioritized list of recommendations."
+          },
+          {
+            "key": "ATiEEnZh2l",
+            "english": "To enforce member permissions with custom roles, go to the <link>Members</link> page and change the member's role type to <b>Custom roles</b>. Custom roles cannot grant features disabled at the organization level. Learn more about <defaultLink>roles and permissions</defaultLink>, or see the <setupGuideLink>setup guide</setupGuideLink> when configuring custom roles."
+          },
+          {
+            "key": "Aa35jCve9F",
+            "english": "Your GitHub organization has an IP allowlist that is blocking Claude's servers from reaching <bold>{repo}</bold>. Add <link>Claude's IP ranges</link> to your GitHub allowlist. Each user will still need to connect their own GitHub account."
+          },
+          {
+            "key": "AcUBFamD/R",
+            "english": "I want to prepare a quarterly business review. Give me room to share what I'm thinking: the key metrics, team accomplishments, and challenges from the quarter. Once that's down, help me sharpen the narrative with follow-up questions. Only start building the quarterly review deck once we've aligned on the story. Then let's iterate on the slides together."
+          },
+          {
+            "key": "Amh83qRsB8",
+            "english": "Your account has been disabled after an automatic review of your recent activities. Please take a look at our <tosLink>Terms of Service</tosLink> and <aupLink>Usage Policy</aupLink> for more information. If you wish to appeal your suspension, please visit our <supportLink>Trust & Safety Center</supportLink>."
+          },
+          {
+            "key": "B/1gREPSp0",
+            "english": "I want to plan a product launch. Give me space to share what we're launching, the timeline, and who's involved. Check if my Slack or Google Drive are connected since they could help pull in existing planning docs and team context. Follow up on anything that's unclear, then draft a launch plan with milestones, owners, and a checklist to track."
+          },
+          {
+            "key": "BCB4IbsI8u",
+            "english": "I want to write technical documentation. Give me space to share what I'm documenting: the system, API, or process, and who the audience is. Check if my GitHub is connected since it could help pull in existing code for context. Follow up on anything that's unclear, then draft clear, structured documentation we can refine together."
+          },
+          {
+            "key": "BUzRFqJGti",
+            "english": "Make sure you trust a plugin before installing, updating, or using it. Plugins installed from marketplaces are not controlled by Anthropic, and Anthropic cannot verify that they will work as intended or that they won't change. See each plugin's homepage for more information."
+          },
+          {
+            "key": "BVsRV2Qswd",
+            "english": "<bold>Act without asking is on.</bold> Claude works, uses connectors, and controls apps on your computer without pausing for approval. You can turn off individual connectors in the Add menu. <link>See safe use tips</link>"
+          },
+          {
+            "key": "BcP+DS6ROq",
+            "english": "I want to write a campaign brief. Give me room to share what I'm thinking: the product, audience, goals, and channels I have in mind. Once that's down, help me sharpen the strategy with follow-up questions. Only start drafting once we've aligned on the messaging and approach."
+          },
+          {
+            "key": "C7DSObBfyT",
+            "english": "Administrators may re-enable certain features not covered by the BAA from the admin console. If non-covered features are re-enabled, your organization is solely responsible for ensuring that use of those features complies with applicable legal obligations."
+          },
+          {
+            "key": "CR09OGPdpk",
+            "english": "Seats can be set up for usage credits once rate limits are hit. Usage credits are billed at API rates on an additional invoice. Admins can enable this and set spend limits in Settings. <link>Token pricing can be found here.</link>"
+          },
+          {
+            "key": "CU/aAVKBz6",
+            "english": "I want to build a web app. Give me room to share what I'm imagining. I might have designs, wireframes, or examples of what I'm going for. Once I've laid that out, help me think through the details with follow-up questions. Only start building once we've agreed on the scope and approach. Then let's iterate as you build it out."
+          },
+          {
+            "key": "CUo9b6y3JH",
+            "english": "Enabling HIPAA compliance executes Anthropic's Business Associate Agreement (BAA) and configures this Claude Enterprise organization to handle Protected Health Information (PHI) within the Eligible Services the BAA covers."
+          },
+          {
+            "key": "CZ9mKm7Pt/",
+            "english": "I want to summarize a Slack channel. First, make sure Slack is connected, and help me set it up if it's not. Then I'll point you at the channel and timeframe. Pull the messages and give me a clear summary: decisions made, action items, anything I should follow up on."
+          },
+          {
+            "key": "CZtxXr6jop",
+            "english": "Take a blog post and turn it into a LinkedIn post, an email newsletter blurb, and a one-page PDF. Pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "CiGjsdsUvp",
+            "english": "Claude will no longer automatically verify code changes using the preview. You can still ask Claude to verify manually. This setting is saved in .claude/launch.json for this project."
+          },
+          {
+            "key": "CwIjS5p2jR",
+            "english": "This request triggered restrictions on violative cyber content and was blocked under Anthropic's Usage Policy. To request an adjustment pursuant to our Cyber Verification Program based on how you use Claude, fill out <formLink>this form</formLink>. To learn more about the program or provide feedback, visit our <helpCenterLink>help center</helpCenterLink>. Please <newChatLink>start a new chat</newChatLink> or <retryLink>retry with {fallbackModelName}</retryLink>. If you think Claude's memory of past conversations may have contributed to this, you can clear it in Settings > Memory."
+          },
+          {
+            "key": "D+i4rWGZl+",
+            "english": "We put your account on hold because of unusual activity. We can't share the specifics—that would help bad actors get around the same checks—but the review is your chance to share context so a team member can review. This affects only your account, not your workspace or teammates."
+          },
+          {
+            "key": "D/pEkIuJFN",
+            "english": "Safety is core to Anthropic's mission and we are committed to building an ecosystem where users can safely interact with and build on top of our products in a harmless, helpful, and honest way."
+          },
+          {
+            "key": "D9yxHPGVon",
+            "english": "Set up a product metrics dashboard — DAU/WAU, weekly retention, funnel conversion, feature adoption, plus a quick read on the trends. Use this template, and pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "DAWdHvft3q",
+            "english": "You are out of available {tier} seats. This will schedule a downgrade for the next billing cycle. The member will remain on their current tier until then, and you’ll need to manually reassign them after the change takes effect."
+          },
+          {
+            "key": "DMVOFEu2Vs",
+            "english": "Put together a one-pager I can read before a client meeting — who's coming, recent emails, what's new at their company, what to bring up. Show me one for a sample meeting first. We can connect Gmail and my calendar later to run it every morning."
+          },
+          {
+            "key": "DlSVkQlX6c",
+            "english": "I want to brainstorm ideas for a project. Let me share what I'm working on (the context, constraints, and what kind of ideas I'm looking for) before you start generating. Once I've laid that out, help me sharpen the direction with follow-up questions. Only start generating ideas once we've agreed on what good looks like. Then let's iterate and build on the best ones together."
+          },
+          {
+            "key": "Do1vz/3MWU",
+            "english": "Build a comparison deck — positioning, pricing, key features, and where we win — across a few competitors. Pull the data from my connected tools. If you're missing a source, ask before building."
+          },
+          {
+            "key": "DuKKwQJrUn",
+            "english": "I want to make a live artifact. Explain what live artifacts are in Cowork, then look at my connectors (MCP servers), and ask me a few questions to figure out what kind of live artifact would be most useful for me."
+          },
+          {
+            "key": "EG+hUsDlur",
+            "english": "This is a copy of a chat between Claude and a user. Content may include unverified or unsafe content that do not represent the views of Anthropic. Shared snapshot may contain attachments and data not displayed here."
+          },
+          {
+            "key": "EXi7WEV5TI",
+            "english": "I want to create a study guide. Give me space to share the subject and what I need to learn. I might have course materials or notes to work from. Follow up on anything that's unclear, then put together a structured guide for us to review and refine."
+          },
+          {
+            "key": "EgFDCZEjpt",
+            "english": "A new cloud session will be created from this conversation. Your branch is pushed and a transcript summary is sent so Claude can pick up where you left off. The local session stays on this device."
+          },
+          {
+            "key": "Eh09EeUbeR",
+            "english": "Help me catch up on what I've missed in Slack.\n\nBefore reading, ask me:\n- Which channels or DMs I should focus on (or check everything)\n- How far back to look (since yesterday, last week, specific date)\n- What I'm most concerned about missing (decisions, @mentions, urgent items, project updates)\n- Whether there are specific topics or people to prioritize\n\nThen scan those channels and show me a summary:\n- Total unread messages\n- Breakdown by channel\n\nFocus on messages that @mention me, contain decisions, or are marked urgent first.\n\nShow me the top 5 most important updates with context and links to the threads. If there are more than 30 unread messages total, start with these top 5 and ask if you should summarize more."
+          },
+          {
+            "key": "Ez5lUjpQmF",
+            "english": "I want to run a due diligence review. Give me space to share details about the company or deal. I might have documents, financials, or specific areas of concern. Follow up on anything that's unclear, then produce a structured assessment for us to review and refine."
+          }
+        ]
+      }
+    },
+    "dynamic": {
+      "totalKeys": 69,
+      "equalToEnglish": 0,
+      "invariant": 0,
+      "shortUi": 0,
+      "sentence": 0,
+      "longForm": 0,
+      "samples": {
+        "shortUi": [],
+        "sentence": [],
+        "longForm": []
+      }
+    }
+  }
+}

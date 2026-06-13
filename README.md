@@ -6,11 +6,13 @@ Claude Desktop 简体中文补丁。项目只修改本机已经安装好的官�
 
 ## 当前状态
 
-- 适配版本：Claude Desktop `1.11187.4`
-- Windows：已在 Claude Desktop AppX / MSIX `1.11187.4` 上实机验证
-- macOS / Linux：使用同一套 Electron 资源补丁逻辑，脚本已适配，但仍建议在对应系统实机复测
+- 适配版本：Claude Desktop `1.12603.1`
+- macOS：已按官方 Claude Desktop `1.12603.1` 的 `/Applications/Claude.app` 资源结构做 dry-run 验证
+- Windows：保留 AppX / MSIX 补丁逻辑；旧版存在 `statsig` 语言表时会自动补丁
+- Linux：使用同一套 Electron 资源补丁逻辑，仍建议在对应发行版实机复测
 - 发布内容：只包含补丁资源、安装脚本、恢复脚本和验证脚本
 - 不再依赖固定前端 chunk 文件名，改为安装时扫描当前版本资源并按内容替换
+- 翻译审计：`resources/*.json` 和新版 `dynamic` 表已无实际英文回落；主 `ion-dist/i18n` 表仍有审计出的英文回落，详见 `docs/translation-audit-1.12603.1.json`
 
 ## 重要说明
 
@@ -42,7 +44,9 @@ Claude Desktop 简体中文补丁。项目只修改本机已经安装好的官�
 1. 语言表文本
    - `resources/*.json`
    - `resources/ion-dist/i18n/*.json`
+   - `resources/ion-dist/i18n/dynamic/*.json`
    - `resources/ion-dist/i18n/statsig/*.json`
+   - `dynamic` / `statsig` 会按当前安装目录实际存在的资源自动选择
 
 2. 前端硬编码文本
    - 安装时扫描 `resources/ion-dist/assets/v1/*.js`
@@ -51,7 +55,7 @@ Claude Desktop 简体中文补丁。项目只修改本机已经安装好的官�
    - 根据 `patch/manual-translations.json`
    - 对当前版本实际存在的文案做内容级替换
 
-已覆盖的典型界面包括：
+重点覆盖的典型界面包括：
 
 - 左侧导航
 - 新建任务
@@ -312,7 +316,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 - 补丁 JSON 是否存在
 - 补丁 JSON 是否合法
 - `zh-CN` / `en-US` key 数量是否一致
-- statsig 语言表是否完整
+- dynamic / statsig 等可选语言表是否完整
 - 硬编码替换表是否存在
 - 是否包含明显 API key / secret
 
@@ -347,16 +351,16 @@ node .\scripts\sync-from-installed.mjs --app-dir "C:\Users\you\AppData\Local\Ant
 ## 打包 Release
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 1.11187.4
+powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 1.12603.1
 ```
 
 输出：
 
 ```text
-dist/claude-desktop-zh-cn-patch-windows-1.11187.4.zip
-dist/claude-desktop-zh-cn-patch-macos-1.11187.4.tar.gz
-dist/claude-desktop-zh-cn-patch-linux-1.11187.4.tar.gz
-dist/release-manifest-1.11187.4.json
+dist/claude-desktop-zh-cn-patch-windows-1.12603.1.zip
+dist/claude-desktop-zh-cn-patch-macos-1.12603.1.tar.gz
+dist/claude-desktop-zh-cn-patch-linux-1.12603.1.tar.gz
+dist/release-manifest-1.12603.1.json
 ```
 
 Release 包只包含补丁项目文件，不包含 Claude Desktop 本体。
@@ -375,6 +379,9 @@ patch/
       i18n/
         zh-CN.json
         en-US.json
+        dynamic/
+          zh-CN.json
+          en-US.json
         statsig/
           zh-CN.json
           en-US.json
@@ -433,9 +440,11 @@ Windows AppX / MSIX 版建议使用 `launch.ps1` 或桌面快捷方式启动。�
 
 ## 已知限制
 
-- Windows 已按 Claude Desktop AppX / MSIX `1.11187.4` 实机验证。
-- macOS / Linux 使用同一套资源补丁逻辑，但仍需要对应系统实机复测。
-- 新版新增 key 仍有部分英文回落，需要持续补翻。
+- macOS 已按 Claude Desktop `1.12603.1` 资源结构做 dry-run 验证。
+- Windows AppX / MSIX 逻辑保留兼容旧版资源结构，但新版 Windows 仍建议实机复测。
+- Linux 使用同一套资源补丁逻辑，但仍需要对应系统实机复测。
+- 主 `ion-dist/i18n` 表仍有大量英文回落，已生成 `docs/translation-audit-1.12603.1.json` 作为后续人工审校清单；不建议用未审校的批量机翻直接填充。
+- 上游未覆盖 key 仍有英文回落，需要持续补翻和人工审校。
 - 服务端返回的动态文案、模型错误、账号状态、历史会话标题、用户自定义项目名不会全部自动翻译。
 - WindowsApps / MSIX 目录受系统保护时，可能需要管理员权限，甚至可能被系统策略禁止直接修改。
 - Linux 没有统一官方安装目录，通常建议手动传 `--app-dir`。

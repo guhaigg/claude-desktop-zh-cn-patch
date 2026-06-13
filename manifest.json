@@ -8,7 +8,7 @@
       "darwin",
       "linux"
     ],
-    "testedVersion": "1.11187.4",
+    "testedVersion": "1.12603.1",
     "packageFamily": "Claude_pzs8sxrjxfjjc"
   },
   "patches": [
@@ -16,9 +16,12 @@
     "resources/en-US.json",
     "resources/ion-dist/i18n/zh-CN.json",
     "resources/ion-dist/i18n/en-US.json",
+    "resources/ion-dist/i18n/dynamic/zh-CN.json",
+    "resources/ion-dist/i18n/dynamic/en-US.json",
     "resources/ion-dist/i18n/statsig/zh-CN.json",
     "resources/ion-dist/i18n/statsig/en-US.json",
     "patch/manual-translations.json",
+    "patch/source-translations.json",
     "patch/hardcoded-replacements.json"
   ],
   "install": "install.ps1",

@@ -27,7 +27,7 @@ if (!dryRun && !noRestart) {
 }
 
 const copiedFiles = [];
-for (const entry of getPatchFileEntries({ forceEnglishSlot })) {
+for (const entry of getPatchFileEntries({ forceEnglishSlot, resourcesDir: target.resourcesDir })) {
   const result = copyPatchedFile(session, {
     sourcePath: entry.sourcePath,
     targetPath: path.join(target.resourcesDir, entry.relativePath),
