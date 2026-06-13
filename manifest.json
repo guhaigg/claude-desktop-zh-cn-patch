@@ -8,7 +8,7 @@
       "darwin",
       "linux"
     ],
-    "testedVersion": "1.12603.1",
+    "testedVersion": "1.12603.2",
     "packageFamily": "Claude_pzs8sxrjxfjjc"
   },
   "patches": [
@@ -25,6 +25,7 @@
     "patch/hardcoded-replacements.json"
   ],
   "install": "install.ps1",
+  "installGithubMacos": "install-github-macos.sh",
   "installAppx": "install-appx.ps1",
   "restore": "restore.ps1"
 }

@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-06-13T17:47:22Z",
+  "allowedUntranslated": "brand names, product names, OS names, paths, URLs, file formats, protocols, code/config identifiers, pure numeric/format placeholders, product-name-only formatted counters such as Claude Enterprise seat deltas",
+  "files": {
+    "root": {
+      "total": 425,
+      "counts": {
+        "missing": 0,
+        "equalDisallowed": 0,
+        "noCjkDisallowed": 0,
+        "maskArtifact": 0,
+        "tagMismatch": 0,
+        "argMismatch": 0
+      },
+      "samples": {
+        "missing": [],
+        "equalDisallowed": [],
+        "noCjkDisallowed": [],
+        "maskArtifact": [],
+        "tagMismatch": [],
+        "argMismatch": []
+      }
+    },
+    "ion": {
+      "total": 16178,
+      "counts": {
+        "missing": 0,
+        "equalDisallowed": 0,
+        "noCjkDisallowed": 0,
+        "maskArtifact": 0,
+        "tagMismatch": 0,
+        "argMismatch": 0
+      },
+      "samples": {
+        "missing": [],
+        "equalDisallowed": [],
+        "noCjkDisallowed": [],
+        "maskArtifact": [],
+        "tagMismatch": [],
+        "argMismatch": []
+      }
+    },
+    "dynamic": {
+      "total": 69,
+      "counts": {
+        "missing": 0,
+        "equalDisallowed": 0,
+        "noCjkDisallowed": 0,
+        "maskArtifact": 0,
+        "tagMismatch": 0,
+        "argMismatch": 0
+      },
+      "samples": {
+        "missing": [],
+        "equalDisallowed": [],
+        "noCjkDisallowed": [],
+        "maskArtifact": [],
+        "tagMismatch": [],
+        "argMismatch": []
+      }
+    },
+    "statsig": {
+      "total": 65,
+      "counts": {
+        "missing": 0,
+        "equalDisallowed": 0,
+        "noCjkDisallowed": 0,
+        "maskArtifact": 0,
+        "tagMismatch": 0,
+        "argMismatch": 0
+      },
+      "samples": {
+        "missing": [],
+        "equalDisallowed": [],
+        "noCjkDisallowed": [],
+        "maskArtifact": [],
+        "tagMismatch": [],
+        "argMismatch": []
+      }
+    }
+  }
+}

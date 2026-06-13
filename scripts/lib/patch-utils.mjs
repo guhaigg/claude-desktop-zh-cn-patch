@@ -381,49 +381,7 @@ export function loadReplacementEntries() {
     }
   }
 
-  return [
-    ...replacements,
-    ...createIntlSourceReplacementEntries(),
-  ].sort((left, right) => right.find.length - left.find.length);
-}
-
-function createIntlSourceReplacementEntries() {
-  if (!fileExists(sourceTranslationsPath)) {
-    return [];
-  }
-
-  const sourceTranslations = readJson(sourceTranslationsPath);
-  const entries = [];
-  const intlStringProps = [
-    "defaultMessage",
-    "label",
-    "title",
-    "description",
-    "placeholder",
-    "children",
-  ];
-
-  for (const [englishValue, chineseValue] of Object.entries(sourceTranslations)) {
-    if (
-      typeof englishValue !== "string" ||
-      typeof chineseValue !== "string" ||
-      englishValue === chineseValue ||
-      englishValue.length < 1
-    ) {
-      continue;
-    }
-
-    const englishLiteral = JSON.stringify(englishValue);
-    const chineseLiteral = JSON.stringify(chineseValue);
-    for (const propName of intlStringProps) {
-      entries.push({
-        find: `${propName}:${englishLiteral}`,
-        replace: `${propName}:${chineseLiteral}`,
-      });
-    }
-  }
-
-  return entries;
+  return replacements.sort((left, right) => right.find.length - left.find.length);
 }
 
 export function applyHardcodedReplacements(session, resourcesDir, replacements) {
@@ -443,7 +401,17 @@ export function applyHardcodedReplacements(session, resourcesDir, replacements) 
   for (const filePath of jsFiles) {
     const originalText = fs.readFileSync(filePath, "utf8");
     let nextText = originalText;
-    const applied = [];
+    const appliedByFind = new Map();
+
+    function recordApplied(entry, count = 1) {
+      const existing = appliedByFind.get(entry.find);
+      if (existing) {
+        existing.count += count;
+      } else {
+        appliedByFind.set(entry.find, { ...entry, count });
+      }
+      matchedPhrases.add(entry.find);
+    }
 
     for (const entry of replacements) {
       if (!nextText.includes(entry.find)) {
@@ -455,8 +423,7 @@ export function applyHardcodedReplacements(session, resourcesDir, replacements) 
         continue;
       }
       nextText = parts.join(entry.replace);
-      applied.push({ find: entry.find, replace: entry.replace, count: occurrences });
-      matchedPhrases.add(entry.find);
+      recordApplied(entry, occurrences);
     }
 
     if (nextText === originalText) {
@@ -482,7 +449,7 @@ export function applyHardcodedReplacements(session, resourcesDir, replacements) 
       targetPath: filePath,
       existedBefore: backup.existedBefore,
       backupPath: backup.backupPath,
-      replacements: applied,
+      replacements: [...appliedByFind.values()],
     };
     session.operations.push(operation);
     changedFiles.push(operation);

@@ -28,28 +28,36 @@
     "replace": "新建会话"
   },
   {
-    "find": "Projects",
-    "replace": "项目"
+    "find": "title:\"Projects\"",
+    "replace": "title:\"项目\""
   },
   {
-    "find": "Extensions",
-    "replace": "扩展"
+    "find": "label:\"Projects\"",
+    "replace": "label:\"项目\""
   },
   {
-    "find": "Connectors",
-    "replace": "连接器"
+    "find": "label:\"Code\"",
+    "replace": "label:\"代码\""
   },
   {
-    "find": "Cowork",
-    "replace": "协作"
+    "find": "ariaLabel:\"Code\"",
+    "replace": "ariaLabel:\"代码\""
+  },
+  {
+    "find": "label:\"Customize\"",
+    "replace": "label:\"自定义\""
+  },
+  {
+    "find": "label:\"Cowork\"",
+    "replace": "label:\"协作\""
   },
   {
     "find": "Desktop App",
     "replace": "桌面应用"
   },
   {
-    "find": "Developer",
-    "replace": "开发者"
+    "find": "ariaLabel:\"Cowork\"",
+    "replace": "ariaLabel:\"协作\""
   },
   {
     "find": "defaultMessage:\"Pinned\"",
@@ -58,6 +66,14 @@
   {
     "find": "defaultMessage:\"Recents\"",
     "replace": "defaultMessage:\"最近\""
+  },
+  {
+    "find": "children:\"Recents\"",
+    "replace": "children:\"最近\""
+  },
+  {
+    "find": "Jg=\"Recents\"",
+    "replace": "Jg=\"最近\""
   },
   {
     "find": "defaultMessage:\"Customize\"",
@@ -77,7 +93,7 @@
   },
   {
     "find": "defaultMessage:\"Total tokens\"",
-    "replace": "defaultMessage:\"Token 总数\""
+    "replace": "defaultMessage:\"总令牌数\""
   },
   {
     "find": "defaultMessage:\"Active days\"",
@@ -108,6 +124,170 @@
     "replace": "defaultMessage:\"7 天\""
   },
   {
+    "find": "tooltip:\"Search\"",
+    "replace": "tooltip:\"搜索\""
+  },
+  {
+    "find": "\"aria-label\":\"Search\"",
+    "replace": "\"aria-label\":\"搜索\""
+  },
+  {
+    "find": "placeholder:\"Search\"",
+    "replace": "placeholder:\"搜索\""
+  },
+  {
+    "find": "label:\"Search\"",
+    "replace": "label:\"搜索\""
+  },
+  {
+    "find": "children:\"Search\"",
+    "replace": "children:\"搜索\""
+  },
+  {
+    "find": "\"aria-label\":\"Mode\"",
+    "replace": "\"aria-label\":\"模式\""
+  },
+  {
+    "find": "\"aria-label\":\"cowork\"===e?\"Group by\":E?\"Filter (active)\":\"Filter\"",
+    "replace": "\"aria-label\":\"cowork\"===e?\"分组依据\":E?\"筛选（已启用）\":\"筛选\""
+  },
+  {
+    "find": "\"aria-label\":\"Usage\"",
+    "replace": "\"aria-label\":\"用量\""
+  },
+  {
+    "find": "`Usage: ${_.join(\", \")}`",
+    "replace": "`用量：${_.join(\", \")}`"
+  },
+  {
+    "find": "\"Usage\"",
+    "replace": "\"用量\""
+  },
+  {
+    "find": "`context ${null!==j?`${j}%`:M}`",
+    "replace": "`上下文 ${null!==j?`${j}%`:M}`"
+  },
+  {
+    "find": "`plan ${N}%`",
+    "replace": "`套餐 ${N}%`"
+  },
+  {
+    "find": "\"Untitled Session\"",
+    "replace": "\"未命名会话\""
+  },
+  {
+    "find": "\"Untitled\"",
+    "replace": "\"未命名\""
+  },
+  {
+    "find": "\"Expand sidebar\"",
+    "replace": "\"展开侧边栏\""
+  },
+  {
+    "find": "\"Collapse sidebar\"",
+    "replace": "\"折叠侧边栏\""
+  },
+  {
+    "find": "\"The Little Prince\"",
+    "replace": "\"《小王子》\""
+  },
+  {
+    "find": "\"Animal Farm\"",
+    "replace": "\"《动物农场》\""
+  },
+  {
+    "find": "\"The Great Gatsby\"",
+    "replace": "\"《了不起的盖茨比》\""
+  },
+  {
+    "find": "\"Harry Potter and the Philosopher's Stone\"",
+    "replace": "\"《哈利·波特与魔法石》\""
+  },
+  {
+    "find": "\"The Hobbit\"",
+    "replace": "\"《霍比特人》\""
+  },
+  {
+    "find": "\"Pride and Prejudice\"",
+    "replace": "\"《傲慢与偏见》\""
+  },
+  {
+    "find": "\"Dune\"",
+    "replace": "\"《沙丘》\""
+  },
+  {
+    "find": "\"Moby-Dick\"",
+    "replace": "\"《白鲸》\""
+  },
+  {
+    "find": "\"The Lord of the Rings\"",
+    "replace": "\"《魔戒》\""
+  },
+  {
+    "find": "\"War and Peace\"",
+    "replace": "\"《战争与和平》\""
+  },
+  {
+    "find": "return\"just now\"",
+    "replace": "return\"刚刚\""
+  },
+  {
+    "find": "return t<90?\"now\":t<3600?`${Math.floor(t/60)}m ago`:t<86400?`${Math.floor(t/3600)}h ago`:`${Math.floor(t/86400)}d ago`",
+    "replace": "return t<90?\"刚刚\":t<3600?`${Math.floor(t/60)} 分钟前`:t<86400?`${Math.floor(t/3600)} 小时前`:`${Math.floor(t/86400)} 天前`"
+  },
+  {
+    "find": "if(t<90)return\"just now\";if(t<3600)return`${Math.floor(t/60)}m ago`;if(t<86400)return`${Math.floor(t/3600)}h ago`;if(t<2592e3)return`${Math.floor(t/86400)}d ago`;",
+    "replace": "if(t<90)return\"刚刚\";if(t<3600)return`${Math.floor(t/60)} 分钟前`;if(t<86400)return`${Math.floor(t/3600)} 小时前`;if(t<2592e3)return`${Math.floor(t/86400)} 天前`;"
+  },
+  {
+    "find": "if(t<90)return\"刚刚\";if(t<3600)return`${Math.floor(t/60)}m ago`;if(t<86400)return`${Math.floor(t/3600)}h ago`;if(t<2592e3)return`${Math.floor(t/86400)}d ago`;",
+    "replace": "if(t<90)return\"刚刚\";if(t<3600)return`${Math.floor(t/60)} 分钟前`;if(t<86400)return`${Math.floor(t/3600)} 小时前`;if(t<2592e3)return`${Math.floor(t/86400)} 天前`;"
+  },
+  {
+    "find": "return s<60?`${s}s ago`:n<60?`${n}m ago`:`${a}h ago`",
+    "replace": "return s<60?`${s} 秒前`:n<60?`${n} 分钟前`:`${a} 小时前`"
+  },
+  {
+    "find": "rel:a<60?`${a}s ago`:a<3600?`${Math.floor(a/60)}m ago`:a<86400?`${Math.floor(a/3600)}h ago`:`${Math.floor(a/86400)}d ago`",
+    "replace": "rel:a<60?`${a} 秒前`:a<3600?`${Math.floor(a/60)} 分钟前`:a<86400?`${Math.floor(a/3600)} 小时前`:`${Math.floor(a/86400)} 天前`"
+  },
+  {
+    "find": "if(t<60)return\"now\";const n=Math.floor(t/60);if(n<60)return`${n}m ago`;const s=Math.floor(n/60);if(s<24)return`${s}h ago`;return`${Math.floor(s/24)}d ago`",
+    "replace": "if(t<60)return\"刚刚\";const n=Math.floor(t/60);if(n<60)return`${n} 分钟前`;const s=Math.floor(n/60);if(s<24)return`${s} 小时前`;return`${Math.floor(s/24)} 天前`"
+  },
+  {
+    "find": "if(s<60)return\"just now\";const n=Math.round(s/60);if(n<60)return`${n}m ago`;const a=Math.round(n/60);if(a<24)return`${a}h ago`;const i=Math.round(a/24);if(i<30)return`${i}d ago`;const r=Math.round(i/30);return r<12?`${r}mo ago`:`${Math.round(r/12)}y ago`",
+    "replace": "if(s<60)return\"刚刚\";const n=Math.round(s/60);if(n<60)return`${n} 分钟前`;const a=Math.round(n/60);if(a<24)return`${a} 小时前`;const i=Math.round(a/24);if(i<30)return`${i} 天前`;const r=Math.round(i/30);return r<12?`${r} 个月前`:`${Math.round(r/12)} 年前`"
+  },
+  {
+    "find": "children:\"1m ago\"",
+    "replace": "children:\"1 分钟前\""
+  },
+  {
+    "find": "return`${n}m ago`",
+    "replace": "return`${n} 分钟前`"
+  },
+  {
+    "find": "return`${a}h ago`",
+    "replace": "return`${a} 小时前`"
+  },
+  {
+    "find": "return`${i}d ago`",
+    "replace": "return`${i} 天前`"
+  },
+  {
+    "find": "return r<12?`${r}mo ago`:`${Math.round(r/12)}y ago`",
+    "replace": "return r<12?`${r} 个月前`:`${Math.round(r/12)} 年前`"
+  },
+  {
+    "find": "children:\"All changes\"",
+    "replace": "children:\"所有更改\""
+  },
+  {
+    "find": "children:\"Attach as context\"",
+    "replace": "children:\"作为上下文附加\""
+  },
+  {
     "find": "z5t={recents:\"Recents\",shared:\"Shared\"}",
     "replace": "z5t={recents:\"最近\",shared:\"已共享\"}"
   },
@@ -124,12 +304,56 @@
     "replace": "接下来我们做什么，"
   },
   {
-    "find": "You've used ~",
-    "replace": "你已使用约 "
+    "find": "defaultMessage:\"You've used ~{times}× more tokens than {book}.\"",
+    "replace": "defaultMessage:\"你使用的令牌约为 {book} 的 {times} 倍。\""
   },
   {
-    "find": " more tokens than Pride and Prejudice.",
-    "replace": " 倍于《傲慢与偏见》的 Token。"
+    "find": "defaultMessage:\"You've used ~{times}\\xd7 more tokens than {book}.\"",
+    "replace": "defaultMessage:\"你使用的令牌约为 {book} 的 {times} 倍。\""
+  },
+  {
+    "find": "defaultMessage:\"你已使用约 {times}\\xd7 more tokens than {book}.\"",
+    "replace": "defaultMessage:\"你使用的令牌约为 {book} 的 {times} 倍。\""
+  },
+  {
+    "find": "defaultMessage:\"You've used about as many tokens as {book}.\"",
+    "replace": "defaultMessage:\"你的令牌用量大约相当于 {book}。\""
+  },
+  {
+    "find": "defaultMessage:\"Daily tokens by model\"",
+    "replace": "defaultMessage:\"各模型每日令牌数\""
+  },
+  {
+    "find": "defaultMessage:\"Compacted conversation · saved {tokens} tokens\"",
+    "replace": "defaultMessage:\"已压缩对话 · 节省 {tokens} 令牌\""
+  },
+  {
+    "find": "defaultMessage:\"Compacted conversation \\xb7 saved {tokens} tokens\"",
+    "replace": "defaultMessage:\"已压缩对话 · 节省 {tokens} 令牌\""
+  },
+  {
+    "find": "defaultMessage:\"Compacted conversation · from {tokens} tokens\"",
+    "replace": "defaultMessage:\"已压缩对话 · 原为 {tokens} 令牌\""
+  },
+  {
+    "find": "defaultMessage:\"Compacted conversation \\xb7 from {tokens} tokens\"",
+    "replace": "defaultMessage:\"已压缩对话 · 原为 {tokens} 令牌\""
+  },
+  {
+    "find": "defaultMessage:\"{tokens} tokens\"",
+    "replace": "defaultMessage:\"{tokens} 令牌\""
+  },
+  {
+    "find": "defaultMessage:\"{count} tokens\"",
+    "replace": "defaultMessage:\"{count} 令牌\""
+  },
+  {
+    "find": "defaultMessage:\"~{count} tokens\"",
+    "replace": "defaultMessage:\"约 {count} 令牌\""
+  },
+  {
+    "find": "const UL=\" tokens\"",
+    "replace": "const UL=\" 令牌\""
   },
   {
     "find": "title:\"Tasks\"",
@@ -272,7 +496,7 @@
     "replace": "正在准备会话…"
   },
   {
-    "find": "Gateway",
-    "replace": "网关"
+    "find": "gateway:\"Gateway\"",
+    "replace": "gateway:\"网关\""
   }
 ]

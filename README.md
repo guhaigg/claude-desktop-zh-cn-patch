@@ -6,13 +6,13 @@ Claude Desktop 简体中文补丁。项目只修改本机已经安装好的官�
 
 ## 当前状态
 
-- 适配版本：Claude Desktop `1.12603.1`
-- macOS：已按官方 Claude Desktop `1.12603.1` 的 `/Applications/Claude.app` 资源结构做 dry-run 验证
+- 适配版本：Claude Desktop `1.12603.2`
+- macOS：已按官方 Claude Desktop `1.12603.2` 的 `/Applications/Claude.app` 资源结构做 dry-run 验证
 - Windows：保留 AppX / MSIX 补丁逻辑；旧版存在 `statsig` 语言表时会自动补丁
 - Linux：使用同一套 Electron 资源补丁逻辑，仍建议在对应发行版实机复测
 - 发布内容：只包含补丁资源、安装脚本、恢复脚本和验证脚本
 - 不再依赖固定前端 chunk 文件名，改为安装时扫描当前版本资源并按内容替换
-- 翻译审计：`resources/*.json` 和新版 `dynamic` 表已无实际英文回落；主 `ion-dist/i18n` 表仍有审计出的英文回落，详见 `docs/translation-audit-1.12603.1.json`
+- 翻译审计：本地资源语言表已按官方 `1.12603.2` 英文基线全量扫描；除品牌名、产品名、系统名、路径、URL、协议、代码/配置标识和纯格式占位符外，无实际英文回落，详见 `docs/translation-audit-1.12603.2.json`
 
 ## 重要说明
 
@@ -51,9 +51,9 @@ Claude Desktop 简体中文补丁。项目只修改本机已经安装好的官�
 2. 前端硬编码文本
    - 安装时扫描 `resources/ion-dist/assets/v1/*.js`
    - 根据 `patch/hardcoded-replacements.json`
-   - 根据 `patch/source-translations.json`
-   - 根据 `patch/manual-translations.json`
-   - 对当前版本实际存在的文案做内容级替换
+   - 只做少量已验证的内容级替换，避免批量改写前端 chunk 造成页面渲染异常
+
+`patch/manual-translations.json` 和 `patch/source-translations.json` 用于生成语言表，不会在安装时批量改写 JS fallback 文案。
 
 重点覆盖的典型界面包括：
 
@@ -203,6 +203,18 @@ C:\Program Files\WindowsApps\Claude_<version>_x64__pzs8sxrjxfjjc\app\resources
 
 ## macOS 安装
 
+一行 GitHub 安装命令：
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/guhaigg/claude-desktop-zh-cn-patch/master/install-github-macos.sh)"
+```
+
+如果 Claude 不在默认 `/Applications/Claude.app`，可以指定路径：
+
+```bash
+CLAUDE_APP_DIR="/Applications/Claude.app" bash -c "$(curl -fsSL https://raw.githubusercontent.com/guhaigg/claude-desktop-zh-cn-patch/master/install-github-macos.sh)"
+```
+
 解压 macOS 包后：
 
 ```bash
@@ -346,21 +358,21 @@ node .\scripts\sync-from-installed.mjs --app-dir "C:\Users\you\AppData\Local\Ant
 - 保留旧补丁里已经存在的翻译
 - 优先应用 `patch/manual-translations.json`
 - 再应用 `patch/source-translations.json`
-- 新增但未翻译的 key 暂时回落为英文
+- 新增但未翻译的 key 会在审计中暴露，发布前不应留下实际英文回落
 
 ## 打包 Release
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 1.12603.1
+powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 1.12603.2
 ```
 
 输出：
 
 ```text
-dist/claude-desktop-zh-cn-patch-windows-1.12603.1.zip
-dist/claude-desktop-zh-cn-patch-macos-1.12603.1.tar.gz
-dist/claude-desktop-zh-cn-patch-linux-1.12603.1.tar.gz
-dist/release-manifest-1.12603.1.json
+dist/claude-desktop-zh-cn-patch-windows-1.12603.2.zip
+dist/claude-desktop-zh-cn-patch-macos-1.12603.2.tar.gz
+dist/claude-desktop-zh-cn-patch-linux-1.12603.2.tar.gz
+dist/release-manifest-1.12603.2.json
 ```
 
 Release 包只包含补丁项目文件，不包含 Claude Desktop 本体。
@@ -399,6 +411,7 @@ install-appx.ps1
 install-appx-system-worker.ps1
 restore.ps1
 install.sh
+install-github-macos.sh
 restore.sh
 install-uac.vbs
 restore-uac.vbs
@@ -440,11 +453,11 @@ Windows AppX / MSIX 版建议使用 `launch.ps1` 或桌面快捷方式启动。�
 
 ## 已知限制
 
-- macOS 已按 Claude Desktop `1.12603.1` 资源结构做 dry-run 验证。
+- macOS 已按 Claude Desktop `1.12603.2` 资源结构做 dry-run 验证。
 - Windows AppX / MSIX 逻辑保留兼容旧版资源结构，但新版 Windows 仍建议实机复测。
 - Linux 使用同一套资源补丁逻辑，但仍需要对应系统实机复测。
-- 主 `ion-dist/i18n` 表仍有大量英文回落，已生成 `docs/translation-audit-1.12603.1.json` 作为后续人工审校清单；不建议用未审校的批量机翻直接填充。
-- 上游未覆盖 key 仍有英文回落，需要持续补翻和人工审校。
+- 已生成 `docs/translation-audit-1.12603.2.json`，用于记录本地语言表缺失、英文回落、占位符、HTML 标签和 ICU 参数审计结果。
+- 上游新增 key 后需要重新同步、补翻并重新审计。
 - 服务端返回的动态文案、模型错误、账号状态、历史会话标题、用户自定义项目名不会全部自动翻译。
 - WindowsApps / MSIX 目录受系统保护时，可能需要管理员权限，甚至可能被系统策略禁止直接修改。
 - Linux 没有统一官方安装目录，通常建议手动传 `--app-dir`。
